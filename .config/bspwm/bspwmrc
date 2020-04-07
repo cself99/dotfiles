@@ -1,0 +1,28 @@
+#!/bin/sh
+
+killall -q redshift
+while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
+redshift &
+xsetroot -cursor_name left_ptr &
+clipster -d &
+picom --dbus --experimental-backends --backend glx --config ~/.config/picom/picom.conf &
+sxhkd &
+feh --bg-fill ~/Pictures/wall.jpg
+
+bspc monitor DP-0 -d 1 2 3 4 5
+bspc monitor HDMI-0 -d 6 7 8 9
+
+bspc config border_width         0
+bspc config window_gap          3
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+#bspc config focus_follows_pointer true
+bspc config single_monocle       true
+
+bspc rule -a Zathura state=tiled
+bspc rule -a Nightly state=tiled
+#bspc config ignore_ewmh_fullscreen none
+
+"$HOME"/.config/polybar/launch.sh &
