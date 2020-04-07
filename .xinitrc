@@ -14,7 +14,6 @@ xrandr --output DP-0 --mode 2560x1440 --rate 143.96 --gamma 0.6:0.6:0.6 --primar
 
 cpupower frequency-set -g powersave
 pactl load-module module-loopback latency_msec=1 &
-unclutter &
 
 systemctl --user import-environment DISPLAY
 export EDITOR="nvim"
