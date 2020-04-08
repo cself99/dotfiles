@@ -18,6 +18,16 @@ super + d
 super + shift + c
 	pkill -USR1 -x sxhkd
 
+XF86AudioPlay
+    mpc toggle
+XF86AudioRaiseVolume
+    mpc volume +5
+XF86AudioLowerVolume
+    mpc volume -5
+XF86AudioNext
+    mpc next
+
+
 #
 # bspwm hotkeys
 #
