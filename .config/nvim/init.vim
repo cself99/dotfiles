@@ -303,3 +303,4 @@ let g:netrw_winsize = 25
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType c setlocal commentstring=//\ %s
 autocmd FileType cpp setlocal commentstring=//\ %so
+set clipboard=unnamedplus
