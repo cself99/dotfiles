@@ -3,7 +3,6 @@
 killall -q redshift
 unclutter &
 [ ! -s ~/.config/mpd/pid ] && mpd
-mpd_discord_richpresence -p 6601 --no-idle
 xsetroot -cursor_name left_ptr &
 clipster -d &
 picom --dbus --experimental-backends --backend glx --config ~/.config/picom/picom.conf &
