@@ -57,6 +57,10 @@ super + g
 super + f
 	bspc node -t fullscreen
 
+# switch between tiled and floating
+super + s
+    bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
 # set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
