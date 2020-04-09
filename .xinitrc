@@ -10,20 +10,13 @@ usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
-xrandr --output DP-0 --mode 2560x1440 --rate 143.96 --gamma 0.6:0.6:0.6 --primary --reflect normal --rotate normal --output HDMI-0 --mode 1920x1080 --right-of DP-0 --rate 60.00 --reflect normal --rotate normal &
+export PATH="{$PATH}:/usr/local/bin"
+export PATH="{$PATH}:/home/c/.local/bin"
+export PATH="{$PATH}:/home/c/bin"
 
+xrandr --output DP-0 --mode 2560x1440 --rate 143.96 --gamma 0.6:0.6:0.6 --primary --reflect normal --rotate normal --output HDMI-0 --mode 1920x1080 --right-of DP-0 --rate 60.00 --reflect normal --rotate normal &
 cpupower frequency-set -g powersave
 pactl load-module module-loopback latency_msec=1 &
-
-systemctl --user import-environment DISPLAY
-
-export PATH="${PATH}:/home/c/bin"
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-export EDITOR="nvim"
-export MPD_HOST=127.0.0.1
-export MPD_PORT=6601
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
