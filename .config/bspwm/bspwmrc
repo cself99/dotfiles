@@ -14,4 +14,4 @@ bspc config single_monocle       true
 bspc rule -a Zathura state=tiled
 bspc rule -a Nightly state=tiled
 
-sh "$HOME"/.startup.sh &
+sh "$HOME"/.startup &
