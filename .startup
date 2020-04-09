@@ -11,8 +11,3 @@ yams
 mpd_discord_richpresence -p=6601 --no-idle --fork
 while pgrep -u $UID -x redshift >/dev/null; do sleep 1; done
 redshift &
-
-
-
-
-
