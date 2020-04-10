@@ -5,7 +5,7 @@ sxhkd &
 unclutter &
 xsetroot -cursor_name left_ptr &
 clipster -d &
-picom --dbus --experimental-backends --backend glx --config ~/.config/picom/picom.conf &
+# picom --dbus --experimental-backends --backend glx --config ~/.config/picom/picom.conf &
 feh --bg-fill ~/Pictures/wall.jpg
 yams
 mpd_discord_richpresence -p=6601 --no-idle --fork
