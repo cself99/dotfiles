@@ -29,7 +29,7 @@ theme.xcolor13    = xrdb.color13    or "#825ECE"
 theme.xcolor14    = xrdb.color14    or "#62CDCD"
 theme.xcolor15    = xrdb.color15    or "#E0E5E5"
 
-theme.font          = "Hack Regular 12"
+theme.font          = "Roboto Regular 12"
 theme.nerd_font     = "Hack Nerd Font Regular 12"
 
 theme.bg_normal     = theme.xbackground

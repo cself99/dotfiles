@@ -212,7 +212,7 @@ end)
 -- }}}
 
 -- Run autostart shell script
-awful.spawn.with_shell(os.getenv("HOME").."/.startup")
+awful.spawn.with_shell(os.getenv("HOME").."/.config/awesome/autorun.sh")
 
 -- Cnfigure garbage collection
 collectgarbage("setpause", 110)
