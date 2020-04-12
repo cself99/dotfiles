@@ -198,6 +198,18 @@ clientbuttons = gears.table.join(
 
 -- Custom bindings
 globalkeys = gears.table.join(globalkeys,
+    awful.key({}, "XF86AudioPlay", function()
+     awful.spawn.with_shell("mpc toggle")
+   end),
+    awful.key({}, "XF86AudioNext", function()
+     awful.spawn.with_shell("mpc next")
+   end),
+    awful.key({}, "XF86AudioRaiseVolume", function()
+     awful.spawn.with_shell("mpc volume +5")
+   end),
+    awful.key({}, "XF86AudioLowerVolume", function()
+     awful.spawn.with_shell("mpc volume -5")
+   end),
     awful.key({ modkey, "Shift" }, "s", function() awful.spawn.with_shell("maim -s | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%H:%M:%S).png") end,
               {description = "take screenshot", group = "awesome"}),
     awful.key({ modkey }, "d", function () awful.spawn.with_shell("rofi -show drun") end,
