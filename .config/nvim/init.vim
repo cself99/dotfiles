@@ -2,9 +2,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf.vim'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
@@ -189,41 +190,6 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                             FZF config                              "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd! FileType fzf tnoremap <buffer> <esc> <c-c>
-nmap <C-p> :Files<cr>
-imap <c-x><c-l> <plug>(fzf-complete-line)
-nnoremap <silent> <leader>\ :Buffers<CR>
-nnoremap <silent> <leader>B :Windows<CR>
-nnoremap <silent> <leader>; :BLines<CR>
-nnoremap <silent> <leader>O :BTags<CR>
-nnoremap <silent> <leader>o :Tags<CR>
-nnoremap <silent> <leader>? :History<CR>
-nnoremap <silent> <leader>gl :Commits<CR>
-nnoremap <silent> <leader>ga :BCommits<CR>
-
-let g:fzf_action = {
-            \ 'ctrl-t': 'tab split',
-            \ 'ctrl-i': 'split',
-            \ 'ctrl-s': 'vsplit' }
-let g:fzf_layout = { 'down': '~20%' }
-
-let g:rg_command = '
-            \ rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --color "always"
-            \ -g "*.{ts,js,json,php,md,styl,pug,jade,html,config,py,cpp,c,go,hs,rb,conf,fa,lst}"
-            \ -g "!{.config,.git,node_modules,vendor,build,yarn.lock,*.sty,*.bst,*.coffee,dist}/*" '
-
-command! -bang -nargs=* F call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1, <bang>0)
-
-function! s:fzf_statusline()
-    highlight fzf1 ctermfg=161 ctermbg=251
-    highlight fzf2 ctermfg=23 ctermbg=251
-    highlight fzf3 ctermfg=237 ctermbg=251
-    setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
-endfunction
-autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                     Got to last cursor position                     "

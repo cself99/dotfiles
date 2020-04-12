@@ -20,7 +20,6 @@ export PATH={$PATH}:/usr/local/bin
 export PATH={$PATH}:/home/c/.local/bin
 export SXHKD_SHELL=sh
 
-
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
-exec bspwm 
+exec awesome

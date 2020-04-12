@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sxhkd &
+
 bspc monitor DP-0 -d 1 2 3 4 5
 bspc monitor HDMI-0 -d 6 7 8 9
 
@@ -15,4 +17,3 @@ bspc rule -a Zathura state=tiled
 bspc rule -a Nightly state=tiled
 bspc rule -a discord desktop=6
 
-sh "$HOME"/.startup &
