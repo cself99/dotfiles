@@ -193,7 +193,7 @@ client.connect_signal("manage", function (c)
     end
 end)
 
--- Do not roud corners for fullscreen and maximized clients
+-- Do not round corners for fullscreen and maximized clients
 local function no_round_corners (c)
     if c.fullscreen or c.maximized then
         c.shape = gears.shape.rectangle
