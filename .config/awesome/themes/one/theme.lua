@@ -44,6 +44,7 @@ theme.fg_urgent     = theme.xforeground
 theme.fg_minimize   = theme.xforeground
 
 theme.useless_gap   = dpi(5)
+theme.gap_single_client  = false
 theme.border_width  = 0
 theme.border_normal = theme.xbackground
 theme.border_focus  = theme.xbackground
@@ -64,7 +65,6 @@ theme.border_marked = theme.xbackground
 theme.hotkeys_modifiers_fg = "#5c6370"
 theme.lock_screen_bg = theme.xbackground.."D1"
 theme.lock_screen_fg = theme.xforeground
-theme.wibar_bg = theme.xbackground
 
 -- Variables set for theming notifications:
 -- notification_font
