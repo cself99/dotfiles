@@ -91,29 +91,31 @@ cursor:
 
 # BEGIN ACE
 colors:
+  # Default colors
   primary:
-    background: '0x282a36'
-    foreground: '0xf8f8f2'
-  cursor:
-    text:       '0x282a36'
-    cursor:     '0xff5555'
+    background: '#262626'
+    foreground: '#AFAFAF'
+
+  # Normal colors
   normal:
-    black:      '0x181a26'
-    red:        '0xef4545'
-    green:      '0x40ea6b'
-    yellow:     '0xe1ea7c'
-    blue:       '0xad83e9'
-    magenta:    '0xef69b6'
-    cyan:       '0x7bd9ed'
-    white:      '0xe8e8e2'
+    black:   '#666666'
+    red:     '#eb606b'
+    green:   '#c3e88d'
+    yellow:  '#f7eb95'
+    blue:    '#80cbc4'
+    magenta: '#ff2f90'
+    cyan:    '#aeddff'
+    white:   '#ffffff'
+
+  # Bright colors
   bright:
-    black:      '0x282a36'
-    red:        '0xff5555'
-    green:      '0x50fa7b'
-    yellow:     '0xf1fa8c'
-    blue:       '0xbd93f9'
-    magenta:    '0xff79c6'
-    cyan:       '0x8be9fd'
-    white:      '0xf8f8f2'
+    black:   '#ff262b'
+    red:     '#eb606b'
+    green:   '#c3e88d'
+    yellow:  '#f7eb95'
+    blue:    '#7dc6bf'
+    magenta: '#6c71c4'
+    cyan:    '#35434d'
+    white:   '#ffffff'
 
 # END ACE
