@@ -1,6 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'itchyny/lightline.vim'
+Plug 'joshdick/onedark.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
@@ -8,11 +10,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-Plug 'itchyny/lightline.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'kristijanhusak/defx-icons'
-Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -25,10 +25,6 @@ cnoreabbrev Wq wq
 cnoreabbrev qq q!
 cnoreabbrev Qq q!
 cnoreabbrev Qa qa
-
-set background=dark
-colorscheme palenight
-let g:palenight_terminal_italics=1
 
 set number
 set relativenumber
@@ -44,47 +40,6 @@ set expandtab
 set undofile
 set noshowmode
 set nofoldenable
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                              Lightline                                "
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! StatusDiagnostic() abort
-    let info = get(b:, 'coc_diagnostic_info', {})
-    if get(info, 'error', 0)
-        return "\uf467"
-    endif
-    if get(info, 'warning', 0)
-        return info['warning'] . "\uf421"
-    endif
-    return ""
-endfunction
-
-let g:lightline = {
-            \   'colorscheme': 'palenight',
-            \   'active': {
-            \     'left':[ [ 'mode', 'paste' ],
-            \              [ 'gitbranch' ],
-            \              ['readonly', 'filename', 'modified' ]
-            \     ],
-            \   'right': [ [ 'lineinfo' ], [ 'percent' ], ['status_diagnostic'] , [ 'fileformat',  'filetype' ] ]
-            \   },
-            \   'component_function': {
-            \     'gitbranch': 'fugitive#head',
-            \   }
-            \ }
-let g:lightline.separator = {
-            \   'left': '', 'right': ''
-            \}
-let g:lightline.subseparator = {
-            \   'left': '|', 'right': '|'
-            \}
-" let g:lightline.tabline = {
-"             \   'left': [ ['tabs'] ],
-"             \   'right': [ ['close'] ]
-"             \ }
-let g:lightline.component = {
-            \ 'status_diagnostic': '%{StatusDiagnostic()}',
-            \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              coc                                      "
@@ -319,4 +274,19 @@ call defx#custom#column('icon', {
 autocmd FileType c setlocal commentstring=//\ %s
 autocmd FileType cpp setlocal commentstring=//\ %so
 set clipboard=unnamedplus
-"python.jediEnabled": false
+colorscheme onedark
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ }
+if (empty($TMUX))
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
