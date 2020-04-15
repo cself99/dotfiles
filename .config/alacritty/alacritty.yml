@@ -13,9 +13,11 @@ env:
   TERM: xterm-256color
 
 window:
+    columns: 90
+    lines: 24
     padding:
-        x: 0
-        y: 15
+        x: 20
+        y: 20
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
