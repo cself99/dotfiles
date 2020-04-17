@@ -12,7 +12,7 @@ HISTFILE=~/.zsh_history
 
 # change ls to lsd
 alias ls='lsd -hA --group-dirs first'
-
+alias windows-reboot='sudo grub-reboot "Windows 10" && sudo reboot'
 # ls after cd
 function chpwd() {
     emulate -L zsh

@@ -7,7 +7,7 @@ function run {
   fi
 }
 
-run udiskie &
+run udiskie
 run clipster -d
 run yams
 run unclutter

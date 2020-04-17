@@ -13,7 +13,6 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
-
 hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -165,11 +164,7 @@ awful.rules.rules = {
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
 }, properties = { titlebars_enabled = false }
-    },
-
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
+    }
 }
 -- }}}
 
@@ -213,6 +208,11 @@ end)
 
 -- Run autostart shell script
 awful.spawn.with_shell(os.getenv("HOME").."/.config/awesome/autorun.sh")
+
+ 
+
+-- mpd
+-- local mympd = lain.widget.mpd()
 
 -- Configure garbage collection
 collectgarbage("setpause", 110)
