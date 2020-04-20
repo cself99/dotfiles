@@ -10,9 +10,12 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-# change ls to lsd
+# aliases
 alias ls='lsd -hA --group-dirs first'
 alias windows-reboot='sudo grub-reboot "Windows 10" && sudo reboot'
+alias pulse-hdmi='pactl load-module module-loopback latency_msec=1'
+alias pulse-unload='pactl unload-module module-loopback'
+
 # ls after cd
 function chpwd() {
     emulate -L zsh
