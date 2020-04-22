@@ -209,11 +209,6 @@ end)
 -- Run autostart shell script
 awful.spawn.with_shell(os.getenv("HOME").."/.config/awesome/autorun.sh")
 
- 
-
--- mpd
--- local mympd = lain.widget.mpd()
-
 -- Configure garbage collection
 collectgarbage("setpause", 110)
 collectgarbage("setstepmul", 1000)
