@@ -4,7 +4,7 @@ Xft.autohint: 0
 Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.rgba: rgb
-Xft.dpi: 109
+Xft.dpi: 107
 Xcursor.theme: OSX-ElCap
 
 *background: #282c34

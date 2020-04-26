@@ -15,7 +15,7 @@ alias ls='lsd -hA --group-dirs first'
 alias windows-reboot='sudo grub-reboot "Windows 10" && sudo reboot'
 alias pulse-hdmi='pactl load-module module-loopback latency_msec=1'
 alias pulse-unload='pactl unload-module module-loopback'
-
+alias gsync='python ~/Documents/GSync/GSyncFlipSwitch.py'
 # ls after cd
 function chpwd() {
     emulate -L zsh
