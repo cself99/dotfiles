@@ -29,7 +29,7 @@ bindsym Mod4+n move scratchpad
 bindsym Mod4+Shift+n scratchpad show
 bindsym Mod4+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5%
 bindsym Mod4+Down exec pactl -- set-sink-volume @DEFAULT_SINK@ -5%
-bindsym Mod4+Shift+s exec maim -s | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%H:%M:%S).png
+bindsym Mod4+Shift+s exec maim -s | exec xclip -selection clipboard -t image/png; exec xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%H:%M:%S).png
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioRaiseVolume exec mpc volume +5

@@ -15,7 +15,7 @@ export PATH={$PATH}:/home/c/.local/bin
 
 xrandr --output DVI-D-0 --primary --mode 1920x1080 --gamma 0.9:0.9:0.9 --rate 60.00 --rotate normal --output HDMI-0 --mode 1920x1080 --gamma 0.9:0.9:0.9 --right-of DVI-D-0 --rotate normal
 systemctl --user import-environment DISPLAY
-picom --backend glx -C -b
+#picom --backend glx -C -b
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 
