@@ -30,8 +30,7 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = ${xrdb:color0:#222}
-;background = #161616
+background = #282c34
 foreground = ${xrdb:color7:#222}
 foreground-alt = ${xrdb:color4:#222}
 primary = ${xrdb:color2:#222}
@@ -49,8 +48,8 @@ volume-med = #ebcb8b
 volume-max = #bf616a
 ; =======================
 
-[bar/mainbar-bspwm]
-monitor = DP-0
+[bar/mainbar-i3]
+monitor = DVI-D-0
 ;monitor-fallback = HDMI1
 width = 100%
 height = 30
@@ -69,7 +68,7 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-wm-restack = bspwm
+wm-restack = i3
 
 border-size = 0
 border-left-size  = 0
@@ -90,73 +89,10 @@ font-1 = "FontAwesome:size=11;3"
 font-2 = "Noto Sans Mono:size=15;4"
 font-3 = "Bitstream Vera Sans:style=Roman:size=15;4"
 
-
-modules-left = bspwm
+modules-left = i3
 modules-right = pavolume memory1 filesystem date powermenu
 
-################################################################################
-################################################################################
-############                  MAINBAR-BSPWM-EXTRA                   ############
-################################################################################
-################################################################################
-
-[bar/mainbar-bspwm-extra]
-monitor = HDMI-1-2
-;monitor-fallback = HDMI1
-width = 100%
-height = 30
-;offset-x = 1%
-;offset-y = 1%
-radius = 0.0
-fixed-center = true
-bottom = true
-separator = |
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-line-color = #f00
-
-wm-restack = bspwm
-override-redirect = false
-
-; Enable support for inter-process messaging
-; See the Messaging wiki page for more details.
-enable-ipc = true
-
-border-size = 0
-border-left-size = 0
-border-right-size = 0
-;border-top-size = 0
-;border-bottom-size = 25
-border-color = #00000000
-
-padding-left = 2
-padding-right = 5
-
-module-margin-left = 2
-module-margin-right = 2
-
-;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Bitstream Vera Sans:style=Roman:size=10;2"
-font-1 = "FontAwesome:size=11;3"
-font-2 = "Noto Sans Mono;size=15;4"
-font-3 = "Bitstream Vera Sans:style=Roman:size=15;4"
-
-modules-left = bspwm
-modules-right = pavolume load-average date
-
-;tray-detached = false
-;tray-offset-x = 0
-;tray-offset-y = 0
-;tray-padding = 2
-;tray-maxsize = 20
-;tray-scale = 1.0
-;tray-position = right
-;tray-background = ${colors.background}
-
-[bar/mainbar-bspwm-third]
+[bar/mainbar-i3-extra]
 monitor = HDMI-0
 ;monitor-fallback = HDMI1
 width = 100%
@@ -174,7 +110,7 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-wm-restack = bspwm
+wm-restack = i3
 override-redirect = false
 
 ; Enable support for inter-process messaging
@@ -200,7 +136,54 @@ font-1 = "FontAwesome:size=11;3"
 font-2 = "Noto Sans Mono;size=15;4"
 font-3 = "Bitstream Vera Sans:style=Roman:size=15;4"
 
-modules-left = bspwm
+modules-left = i3
+modules-right = pavolume load-average date
+
+[bar/mainbar-i3-third]
+monitor = HDMI-0
+;monitor-fallback = HDMI1
+width = 100%
+height = 30
+;offset-x = 1%
+;offset-y = 1%
+radius = 0.0
+fixed-center = true
+bottom = true
+separator = |
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+wm-restack = i3
+override-redirect = false
+
+; Enable support for inter-process messaging
+; See the Messaging wiki page for more details.
+enable-ipc = true
+
+border-size = 0
+border-left-size = 0
+border-right-size = 0
+;border-top-size = 0
+;border-bottom-size = 25
+border-color = #00000000
+
+padding-left = 2
+padding-right = 5
+
+module-margin-left = 2
+module-margin-right = 2
+
+;https://github.com/jaagr/polybar/wiki/Fonts
+font-0 = "Bitstream Vera Sans:style=Roman:size=10;2"
+font-1 = "FontAwesome:size=11;3"
+font-2 = "Noto Sans Mono;size=15;4"
+font-3 = "Bitstream Vera Sans:style=Roman:size=15;4"
+
+modules-left = i3
 modules-right = pavolume load-average date
 
 ;tray-detached = false
@@ -212,14 +195,8 @@ modules-right = pavolume load-average date
 ;tray-position = right
 ;tray-background = ${colors.background}
 
-################################################################################
-################################################################################
-############                       MODULE BSPWM                     ############
-################################################################################
-################################################################################
-
-[module/bspwm]
-type = internal/bspwm
+[module/i3]
+type = internal/i3
 
 enable-click = true
 enable-scroll = true
@@ -286,14 +263,6 @@ label-private-foreground = ${colors.foreground}
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 
-
-################################################################################
-###############################################################################
-############                       MODULES A-Z                      ############
-################################################################################
-################################################################################
-
-
 [module/cpu-graph]
 type = internal/cpu
 interval = 0.5
@@ -321,7 +290,6 @@ format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-underline = ${colors.foreground-alt}
 format-padding = 3
-
 
 [module/memory1]
 type = internal/memory
@@ -362,28 +330,7 @@ ramp-swap-used-7-foreground = ${colors.adapta-red}
 ramp-swap-used-font = 3
 ramp-swap-used-underline = ${colors.foreground-alt}
 
-; Available tokens:
-;   %percentage_used% (default)
-;   %percentage_free%
-;   %gb_used%
-;   %gb_free%
-;   %gb_total%
-;   %mb_used%
-;   %mb_free%
-;   %mb_total%
-;   %percentage_swap_used%
-;   %percentage_swap_free%
-;   %mb_swap_total%
-;   %mb_swap_free%
-;   %mb_swap_used%
-;   %gb_swap_total%
-;   %gb_swap_free%
-;   %gb_swap_used%
-
 label = " %percentage_used%%"
-
-
-; Only applies if <bar-used> is used
 
 bar-used-indicator = 
 bar-used-width = 10
@@ -483,28 +430,11 @@ format-mounted-foreground = ${colors.foreground}
 format-mounted-background = ${colors.background}
 format-mounted-underline = ${colors.foreground-alt}
 
-; Available tokens:
-;   %mountpoint%
-;   %type%
-;   %fsname%
-;   %percentage_free%
-;   %percentage_used%
-;   %total%
-;   %free%
-;   %used%
-; Default: %mountpoint% %percentage_free%%
 label-mounted =   %percentage_free%%
-;label-mounted = %mountpoint% : %used% used of %total%
 
-; Available tokens:
-;   %mountpoint%
-; Default: %mountpoint% is not mounted
 label-unmounted =   not mounted
 format-unmounted-foreground = ${colors.foreground}
 format-unmounted-background = ${colors.background}
-;format-unmounted-underline = ${colors.alert}
-
-################################################################################
 
 [module/load-average]
 type = internal/cpu
@@ -520,8 +450,6 @@ format-background = ${colors.background}
 ;format-prefix-foreground = ${colors.foreground}
 format-underline = ${colors.foreground-alt}
 
-################################################################################
-
 [module/pavolume]
 type = custom/script
 tail = true
@@ -534,8 +462,6 @@ scroll-down = ~/.config/polybar/scripts/pavolume.sh --down
 format-underline = #3EC13F
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-
-################################################################################
 
 [module/powermenu]
 type = custom/menu

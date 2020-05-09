@@ -17,7 +17,8 @@ alias pulse-hdmi='pactl load-module module-loopback latency_msec=1'
 alias pulse-unload='pactl unload-module module-loopback'
 alias mon='bash ~/Documents/Mon2Cam.sh -r 1920:1080'
 alias gsync='python ~/Documents/GSync/GSyncFlipSwitch.py'
-alias cemu='bash ~/HDD/.LaunchCEMU'
+alias cemu='bash ~/HDD/.cemu/LaunchCEMU'
+
 # ls after cd
 function chpwd() {
     emulate -L zsh

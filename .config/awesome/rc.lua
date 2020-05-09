@@ -87,7 +87,7 @@ awful.layout.layouts = {
     awful.layout.suit.spiral,
     awful.layout.suit.floating,
     -- awful.layout.suit.tile.left,
-    -- awful.layout.suit.tile.bottom,
+    awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
     -- awful.layout.suit.fair,
     -- awful.layout.suit.fair.horizontal,
@@ -109,6 +109,18 @@ require("evil")
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
 -- }}}
+
+lo = awful.layout.layouts
+my_tags = {
+    tags = {
+        { names =  { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+          layout = { lo[1], lo[1], lo[1], lo[1], lo[1], lo[1], lo[1], lo[1], lo[1] },
+        },
+        { names =  { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+          layout = { lo[1], lo[1], lo[1], lo[1], lo[1], lo[1], lo[1], lo[1], lo[1] },
+        },
+    }
+}
 
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
@@ -183,7 +195,9 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    screen_index = s.index
+    awful.tag(my_tags.tags[screen_index].names, s, my_tags.tags[screen_index].layout)
+
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
     -- Create an imagebox widget which will contain an icon indicating which layout we're using.
@@ -213,6 +227,7 @@ awful.screen.connect_for_each_screen(function(s)
         },
         buttons = taglist_buttons
     }
+
 
     -- Create a tasklist widget
     s.mytasklist = awful.widget.tasklist {
