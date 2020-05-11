@@ -100,8 +100,7 @@ gaps outer 15
 smart_gaps on
 
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
-exec --no-startup-id polybar mainbar-i3
-exec --no-startup-id polybar mainbar-i3-extra
+exec --no-startup-id polybar example
 exec --no-startup-id udiskie
 exec --no-startup-id clipster -d
 exec --no-startup-id yams
