@@ -5,31 +5,31 @@ set $down j
 set $left h
 set $right l
 
-floating_modifier Mod1
+set $mod Mod4
 
-bindsym Mod4+Return exec alacritty
-bindsym Mod4+Shift+a kill
-bindsym Mod4+Shift+c reload
-bindsym Mod4+d exec rofi -show drun
-bindsym Mod4+$left focus left
-bindsym Mod4+$down focus down
-bindsym Mod4+$up focus up
-bindsym Mod4+$right focus right
-bindsym Mod4+Shift+$left move left
-bindsym Mod4+Shift+$down move down
-bindsym Mod4+Shift+$up move up
-bindsym Mod4+Shift+$right move right
-bindsym Mod4+a split toggle
-bindsym Mod4+f fullscreen toggle
-bindsym Mod4+c layout toggle tabbed splith
-bindsym Mod4+Shift+space floating toggle
-bindsym Mod4+space focus mode_toggle
-bindsym Mod4+g focus parent
-bindsym Mod4+n move scratchpad
-bindsym Mod4+Shift+n scratchpad show
-bindsym Mod4+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5%
-bindsym Mod4+Down exec pactl -- set-sink-volume @DEFAULT_SINK@ -5%
-bindsym Mod4+Shift+s exec maim -s | exec xclip -selection clipboard -t image/png; exec xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%H:%M:%S).png
+bindsym $mod+Return exec alacritty
+bindsym $mod+Shift+a kill
+bindsym $mod+Shift+c reload
+bindsym $mod+d exec rofi -show drun
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+bindsym $mod+a split toggle
+bindsym $mod+f fullscreen toggle
+bindsym $mod+c layout toggle tabbed splith
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+g focus parent
+bindsym $mod+n move scratchpad
+bindsym $mod+Shift+n scratchpad show
+bindsym $mod+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5%
+bindsym $mod+Down exec pactl -- set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+Shift+s exec maim -s | exec xclip -selection clipboard -t image/png; exec xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%H:%M:%S).png
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioRaiseVolume exec mpc volume +5
@@ -57,27 +57,27 @@ workspace $ws8 output HDMI-0
 workspace $ws9 output HDMI-0
 workspace $ws10 output HDMI-0
 
-bindsym Mod4+q workspace number $ws1
-bindsym Mod4+w workspace number $ws2
-bindsym Mod4+e workspace number $ws3
-bindsym Mod4+r workspace number $ws4
-bindsym Mod4+t workspace number $ws5
-bindsym Mod4+y workspace number $ws6
-bindsym Mod4+u workspace number $ws7
-bindsym Mod4+i workspace number $ws8
-bindsym Mod4+o workspace number $ws9
-bindsym Mod4+p workspace number $ws10
+bindsym $mod+q workspace number $ws1
+bindsym $mod+w workspace number $ws2
+bindsym $mod+e workspace number $ws3
+bindsym $mod+r workspace number $ws4
+bindsym $mod+t workspace number $ws5
+bindsym $mod+y workspace number $ws6
+bindsym $mod+u workspace number $ws7
+bindsym $mod+i workspace number $ws8
+bindsym $mod+o workspace number $ws9
+bindsym $mod+p workspace number $ws10
 
-bindsym Mod4+Shift+q move container to workspace number $ws1
-bindsym Mod4+Shift+w move container to workspace number $ws2
-bindsym Mod4+Shift+e move container to workspace number $ws3
-bindsym Mod4+Shift+r move container to workspace number $ws4
-bindsym Mod4+Shift+t move container to workspace number $ws5
-bindsym Mod4+Shift+y move container to workspace number $ws6
-bindsym Mod4+Shift+u move container to workspace number $ws7
-bindsym Mod4+Shift+i move container to workspace number $ws8
-bindsym Mod4+Shift+o move container to workspace number $ws9
-bindsym Mod4+Shift+p move container to workspace number $ws10
+bindsym $mod+Shift+q move container to workspace number $ws1
+bindsym $mod+Shift+w move container to workspace number $ws2
+bindsym $mod+Shift+e move container to workspace number $ws3
+bindsym $mod+Shift+r move container to workspace number $ws4
+bindsym $mod+Shift+t move container to workspace number $ws5
+bindsym $mod+Shift+y move container to workspace number $ws6
+bindsym $mod+Shift+u move container to workspace number $ws7
+bindsym $mod+Shift+i move container to workspace number $ws8
+bindsym $mod+Shift+o move container to workspace number $ws9
+bindsym $mod+Shift+p move container to workspace number $ws10
 
 mode "resize" {
 
@@ -88,10 +88,10 @@ mode "resize" {
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
-        bindsym Mod4+r mode "default"
+        bindsym $mod+r mode "default"
 }
 
-bindsym Mod4+s mode "resize"
+bindsym $mod+s mode "resize"
 
 for_window [class="^.*"] border pixel 0
 default_border pixel 0
