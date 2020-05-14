@@ -107,7 +107,7 @@ label-mode-foreground = #000
 label-mode-background = ${colors.color1}
 
 ; focused = Active workspace on focused monitor
-label-focused = %icon%
+label-focused = %index%
 label-focused-foreground = #ffffff
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.color3}
@@ -141,7 +141,18 @@ ws-icon-4 = 5;5
 ws-icon-5 = 6;6
 ws-icon-6 = 7;7
 ws-icon-7 = 8;8
-ws-icon;8 = 9;9
+ws-icon-8 = 9;9
+ws-icon-9 = 10;10 
+ws-icon-10 = 11;11
+ws-icon-11 = 12;12
+ws-icon-12 = 13;13
+ws-icon-13 = 14;14
+ws-icon-14 = 15;15
+ws-icon-15 = 16;16
+ws-icon-16 = 17;17
+ws-icon-17 = 18;18
+ws-icon-18 = 19;19
+ws-icon-19 = 20;20
 
 
 [module/cpu]
@@ -247,8 +258,8 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/temperature]
 type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
+thermal-zone = 2
+warn-temperature = 75
 
 format-prefix = "﨎 "
 format-prefix-foreground = #ffffff

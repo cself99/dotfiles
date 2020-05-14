@@ -1,5 +1,15 @@
 font pango:DejaVu Sans Mono 10
 
+output DVI-D-1 pos 0 0 res 1920x1080
+output HDMI-A-1 pos 1920 0 res 1920x1080
+output "*" bg /home/c/Pictures/wallpaper.jpg fill
+
+input "12375:2:Kingsis_Corporation_ZOWIE_Gaming_mouse" {
+pointer_accel -1
+}
+
+seat * hide_cursor 3000
+
 set $up k
 set $down j
 set $left h
@@ -11,7 +21,7 @@ set $mod2 Mod1
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+a kill
 bindsym $mod+Shift+c reload
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec wofi --show drun
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -30,7 +40,7 @@ bindsym $mod+n move scratchpad
 bindsym $mod+Shift+n scratchpad show
 bindsym $mod+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod+Down exec pactl -- set-sink-volume @DEFAULT_SINK@ -5%
-bindsym $mod+Shift+s exec maim -s | exec xclip -selection clipboard -t image/png; exec xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%H:%M:%S).png
+bindsym $mod+Shift+s exec grim -g "$(slurp)" -t png - | wl-copy -t image/png && wl-paste > /home/c/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')
 
 bindsym $mod2+Return exec alacritty
 bindsym $mod2+Shift+a kill
@@ -54,7 +64,7 @@ bindsym $mod2+n move scratchpad
 bindsym $mod2+Shift+n scratchpad show
 bindsym $mod2+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod2+Down exec pactl -- set-sink-volume @DEFAULT_SINK@ -5%
-bindsym $mod2+Shift+s exec maim -s | exec xclip -selection clipboard -t image/png; exec xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%H:%M:%S).png
+bindsym $mod2+Shift+s exec grim -g "$(slurp)" -t png - | wl-copy -t image/png && wl-paste > $(xdg-user-dir PICTURES)/Screenshots/$(date +'%Y-%m-%d-%H%M%S_grim.png')
 
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
@@ -94,16 +104,16 @@ workspace $ws8 output DVI-D-1
 workspace $ws9 output DVI-D-1
 workspace $ws10 output DVI-D-1
 
-workspace $ws11 output HDMI-1
-workspace $ws12 output HDMI-1
-workspace $ws13 output HDMI-1
-workspace $ws14 output HDMI-1
-workspace $ws15 output HDMI-1
-workspace $ws16 output HDMI-1
-workspace $ws17 output HDMI-1
-workspace $ws18 output HDMI-1
-workspace $ws19 output HDMI-1
-workspace $ws20 output HDMI-1
+workspace $ws11 output HDMI-A-1
+workspace $ws12 output HDMI-A-1
+workspace $ws13 output HDMI-A-1
+workspace $ws14 output HDMI-A-1
+workspace $ws15 output HDMI-A-1
+workspace $ws16 output HDMI-A-1
+workspace $ws17 output HDMI-A-1
+workspace $ws18 output HDMI-A-1
+workspace $ws19 output HDMI-A-1
+workspace $ws20 output HDMI-A-1
 
 bindsym $mod+q workspace number $ws1
 bindsym $mod+w workspace number $ws2
@@ -149,6 +159,10 @@ bindsym $mod2+Shift+i move container to workspace number $ws18
 bindsym $mod2+Shift+o move container to workspace number $ws19
 bindsym $mod2+Shift+p move container to workspace number $ws20
 
+bar {
+        swaybar_command waybar
+}
+
 mode "resize" {
 
         bindsym $left resize shrink width 10 px or 10 ppt
@@ -171,12 +185,8 @@ gaps inner 10
 gaps outer 15
 smart_gaps on
 
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
-exec --no-startup-id polybar example
-exec --no-startup-id udiskie
-exec --no-startup-id clipster -d
-exec --no-startup-id yams
-exec --no-startup-id unclutter
-exec --no-startup-id mpd_discord_richpresence -p=6601 --no-idle --fork
-exec --no-startup-id redshift
-
+exec redshift
+exec mako
+exec udiskie
+exec yams
+exec mpd_discord_richpresence -p=6601 --no-idle --fork

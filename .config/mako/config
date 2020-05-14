@@ -1,0 +1,20 @@
+font=SF Pro Display Medium 12
+background-color=#262626
+text-color=#e9cac8
+progress-color=#AD6E77
+padding=10
+margin=15
+border-size=0
+border-radius=5
+icon-path=/usr/share/icons/Papirus-Dark
+default-timeout=4000
+group-by=category
+border-color=#121527
+width=400
+
+[category="progress"]
+format=<b>%s</b>\n%b
+border-radius=20
+border-size=2
+width=200
+background-color=#121527

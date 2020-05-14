@@ -6,12 +6,14 @@ export WINEFSYNC=1
 export MPD_HOST=127.0.0.1
 export MPD_PORT=6601
 export QT_STYLE_OVERRIDE=gtk2
-export __GL_SHADER_DISK_CACHE_SKIP_CLEANUP=1
-export __GL_THREADED_OPTIMIZATIONS=1
-#export GDK_BACKEND=wayland
+export MOZ_ENABLE_WAYLAND=1
+export QT_QPA_PLATFORM=wayland-egl
+export QT_WAYLAND_FORCE_DPI=physical
+export GTK_THEME=Arc-Dark
+export RADV_PERFTEST=aco
 
-#val=$(udevadm info -a -n /dev/dri/card1 | grep boot_vga | rev | cut -c 2)
-#cmd="WLR_DRM_DEVICES=/dev/dri/card$val sway --my-next-gpu-wont-be-nvidia"
-#eval "$cmd"
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  XKB_DEFAULT_LAYOUT=us exec sway
+fi
 
-[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+#[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx

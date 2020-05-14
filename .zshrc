@@ -13,10 +13,11 @@ HISTFILE=~/.zsh_history
 # aliases
 alias ls='lsd -hA --group-dirs first'
 alias windows-reboot='sudo grub-reboot "Windows 10" && sudo reboot'
-alias pulse-hdmi='pactl load-module module-loopback latency_msec=1'
-alias pulse-unload='pactl unload-module module-loopback'
-alias mon='bash ~/Documents/Mon2Cam.sh -r 1920:1080'
-alias gsync='python ~/Documents/GSync/GSyncFlipSwitch.py'
+alias hdmi='pactl load-module module-loopback latency_msec=1'
+alias unload='pactl unload-module module-loopback | pactl unload-module module-null-sink'
+alias loop='bash ~/Documents/audioloop.sh'
+#alias mon='bash ~/Documents/Mon2Cam.sh -r 1280:720'
+alias mon='bash ~/Documents/mon.sh'
 alias cemu='bash ~/HDD/.cemu/LaunchCEMU'
 
 # ls after cd
