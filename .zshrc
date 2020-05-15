@@ -19,6 +19,7 @@ alias loop='bash ~/Documents/audioloop.sh'
 #alias mon='bash ~/Documents/Mon2Cam.sh -r 1280:720'
 alias mon='bash ~/Documents/mon.sh'
 alias cemu='bash ~/HDD/.cemu/LaunchCEMU'
+alias bios='systemctl reboot --firmware-setup'
 
 # ls after cd
 function chpwd() {
