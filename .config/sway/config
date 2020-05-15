@@ -18,6 +18,8 @@ set $right l
 set $mod Mod4
 set $mod2 Mod1
 
+floating_modifier $mod
+
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+a kill
 bindsym $mod+Shift+c reload
