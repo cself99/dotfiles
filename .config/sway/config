@@ -4,6 +4,10 @@ output DVI-D-1 pos 0 0 res 1920x1080
 output HDMI-A-1 pos 1920 0 res 1920x1080
 output "*" bg /home/c/Pictures/wallpaper.jpg fill
 
+bar {
+        swaybar_command waybar
+}
+
 input "12375:2:Kingsis_Corporation_ZOWIE_Gaming_mouse" {
 pointer_accel -1
 }
@@ -16,7 +20,6 @@ set $left h
 set $right l
 
 set $mod Mod4
-set $mod2 Mod1
 
 floating_modifier $mod
 
@@ -32,41 +35,19 @@ bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
-bindsym $mod+a split toggle
+bindsym $mod+a focus output DVI-D-1
+bindsym $mod+s focus output HDMI-A-1
+bindsym $mod+c split toggle
 bindsym $mod+f fullscreen toggle
-bindsym $mod+c layout toggle tabbed splith
+bindsym $mod+g layout toggle tabbed splith
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
-bindsym $mod+g focus parent
+bindsym $mod+z focus parent
 bindsym $mod+n move scratchpad
 bindsym $mod+Shift+n scratchpad show
 bindsym $mod+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod+Down exec pactl -- set-sink-volume @DEFAULT_SINK@ -5%
 bindsym $mod+Shift+s exec grim -g "$(slurp)" -t png - | wl-copy -t image/png && wl-paste > /home/c/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')
-
-bindsym $mod2+Return exec alacritty
-bindsym $mod2+Shift+a kill
-bindsym $mod2+Shift+c reload
-bindsym $mod2+d exec rofi -show drun
-bindsym $mod2+$left focus left
-bindsym $mod2+$down focus down
-bindsym $mod2+$up focus up
-bindsym $mod2+$right focus right
-bindsym $mod2+Shift+$left move left
-bindsym $mod2+Shift+$down move down
-bindsym $mod2+Shift+$up move up
-bindsym $mod2+Shift+$right move right
-bindsym $mod2+a split toggle
-bindsym $mod2+f fullscreen toggle
-bindsym $mod2+c layout toggle tabbed splith
-bindsym $mod2+Shift+space floating toggle
-bindsym $mod2+space focus mode_toggle
-bindsym $mod2+g focus parent
-bindsym $mod2+n move scratchpad
-bindsym $mod2+Shift+n scratchpad show
-bindsym $mod2+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5%
-bindsym $mod2+Down exec pactl -- set-sink-volume @DEFAULT_SINK@ -5%
-bindsym $mod2+Shift+s exec grim -g "$(slurp)" -t png - | wl-copy -t image/png && wl-paste > $(xdg-user-dir PICTURES)/Screenshots/$(date +'%Y-%m-%d-%H%M%S_grim.png')
 
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
@@ -128,17 +109,6 @@ bindsym $mod+i workspace number $ws8
 bindsym $mod+o workspace number $ws9
 bindsym $mod+p workspace number $ws10
 
-bindsym $mod2+q workspace number $ws11
-bindsym $mod2+w workspace number $ws12
-bindsym $mod2+e workspace number $ws13
-bindsym $mod2+r workspace number $ws14
-bindsym $mod2+t workspace number $ws15
-bindsym $mod2+y workspace number $ws16
-bindsym $mod2+u workspace number $ws17
-bindsym $mod2+i workspace number $ws18
-bindsym $mod2+o workspace number $ws19
-bindsym $mod2+p workspace number $ws20
-
 bindsym $mod+Shift+q move container to workspace number $ws1
 bindsym $mod+Shift+w move container to workspace number $ws2
 bindsym $mod+Shift+e move container to workspace number $ws3
@@ -150,21 +120,6 @@ bindsym $mod+Shift+i move container to workspace number $ws8
 bindsym $mod+Shift+o move container to workspace number $ws9
 bindsym $mod+Shift+p move container to workspace number $ws10
 
-bindsym $mod2+Shift+q move container to workspace number $ws11
-bindsym $mod2+Shift+w move container to workspace number $ws12
-bindsym $mod2+Shift+e move container to workspace number $ws13
-bindsym $mod2+Shift+r move container to workspace number $ws14
-bindsym $mod2+Shift+t move container to workspace number $ws15
-bindsym $mod2+Shift+y move container to workspace number $ws16
-bindsym $mod2+Shift+u move container to workspace number $ws17
-bindsym $mod2+Shift+i move container to workspace number $ws18
-bindsym $mod2+Shift+o move container to workspace number $ws19
-bindsym $mod2+Shift+p move container to workspace number $ws20
-
-bar {
-        swaybar_command waybar
-}
-
 mode "resize" {
 
         bindsym $left resize shrink width 10 px or 10 ppt
@@ -175,11 +130,9 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
-        bindsym $mod2+r mode "default"
 }
 
-bindsym $mod+s mode "resize"
-bindsym $mod2+s mode "resize"
+bindsym $mod+b mode "resize"
 
 for_window [class="^.*"] border pixel 0
 default_border pixel 0
@@ -192,3 +145,5 @@ exec mako
 exec udiskie
 exec yams
 exec mpd_discord_richpresence -p=6601 --no-idle --fork
+exec bash ~/Documents/workspacekeys.sh
+exec swaymsg focus output DVI-D-1
