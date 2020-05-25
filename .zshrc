@@ -14,12 +14,13 @@ HISTFILE=~/.zsh_history
 alias ls='lsd -hA --group-dirs first'
 alias windows-reboot='sudo grub-reboot "Windows 10" && sudo reboot'
 alias hdmi='pactl load-module module-loopback latency_msec=1'
-alias unload='pactl unload-module module-loopback | pactl unload-module module-null-sink'
-alias loop='bash ~/Documents/audioloop.sh'
-#alias mon='bash ~/Documents/Mon2Cam.sh -r 1280:720'
-alias mon='bash ~/Documents/mon.sh'
+alias unload='pactl unload-module module-loopback | pactl unload-module module-null-sink | pactl unload-module module-combine-sink'
+alias monaudio='bash ~/scripts/monaudio.sh'
+#alias mon='bash ~/scripts/Mon2Cam.sh -r 1280:720' #X11
+alias mon='bash ~/scripts/mon.sh' #Wayland
 alias cemu='bash ~/HDD/.cemu/LaunchCEMU'
 alias bios='systemctl reboot --firmware-setup'
+alias cleanup='sudo pacman -Rsn $(pacman -Qdtq); sudo pacman -Sc'
 
 # ls after cd
 function chpwd() {
