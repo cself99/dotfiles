@@ -1,6 +1,0 @@
-configuration{
-        modi: "drun";
-        theme: "nord";
-        font: "SF Pro Display 12";
-        show-icons: true;
-}
