@@ -11,9 +11,8 @@ export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
 export QT_QPA_PLATFORMTHEME=qt5ct
 export GTK_THEME=Arc-Dark
 export RADV_PERFTEST=aco
+export XDG_CURRENT_DESKTOP=sway
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   XKB_DEFAULT_LAYOUT=us exec sway
 fi
-
-#[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx

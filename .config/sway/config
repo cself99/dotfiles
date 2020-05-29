@@ -1,18 +1,35 @@
-font pango:DejaVu Sans Mono 10
+font pango:SF Mono 10
 
-output DP-2 pos 1920 1080 res 1920x1080 subpixel rgb bg /home/c/Pictures/wallpaper.jpg fill
-output HDMI-A-1 pos 0 1080 res 1920x1080@144Hz subpixel rgb bg /home/c/Pictures/wallpaper.jpg fill
-output DVI-D-1 pos 0 0 res 1920x1080 subpixel rgb bg /home/c/Pictures/wallpaper.jpg fill 
+set $output_main DP-3
+set $output_top HDMI-A-1
+set $output_right DP-1
+
+output $output_right pos 1920 1080 res 1920x1080 subpixel rgb bg /home/c/Pictures/wallpaper.png fill
+output $output_main pos 0 1080 res 1920x1080@144Hz subpixel rgb bg /home/c/Pictures/wallpaper.png fill
+output $output_top pos 0 0 res 1920x1080 subpixel rgb bg /home/c/Pictures/wallpaper.png fill 
 
 bar {
         swaybar_command waybar
 }
 
-input "12375:2:Kingsis_Corporation_ZOWIE_Gaming_mouse" {
-pointer_accel -1
+input "9610:51:SINOWEALTH_Wired_Gaming_Mouse_Keyboard" events disabled
+
+input "9610:51:SINOWEALTH_Wired_Gaming_Mouse" {
+    accel_profile flat
+    pointer_accel 0
 }
 
 seat * hide_cursor 3000
+
+set $lock_bg ~/Pictures/purple.jpg
+
+exec swayidle -w \
+         timeout 300 'swaylock -f -c 000000 -i $lock_bg' \
+         timeout 600 'swaymsg "output * dpms off"' \
+              resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000 -i $lock_bg'
+
+for_window [class="^.*"] inhibit_idle fullscreen for_window [app_id="^.*"] inhibit_idle fullscreen
 
 set $up k
 set $down j
@@ -20,6 +37,12 @@ set $left h
 set $right l
 
 set $mod Mod4
+
+#for_window [class="^.*"] border none
+default_border none
+gaps inner 10
+gaps outer 15
+smart_gaps on
 
 floating_modifier $mod
 
@@ -35,14 +58,14 @@ bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
-bindsym $mod+a focus output DVI-D-1
-bindsym $mod+s focus output HDMI-A-1
-bindsym $mod+c split toggle
+bindsym $mod+a focus output $output_top
+bindsym $mod+z focus output $output_main
+bindsym $mod+x focus output $output_right
+bindsym $mod+s split toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+g layout toggle tabbed splith
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+space focus mode_toggle
-bindsym $mod+z focus parent
+bindsym $mod+space floating toggle
+bindsym $mod+c focus parent
 bindsym $mod+n move scratchpad
 bindsym $mod+Shift+n scratchpad show
 bindsym $mod+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5%
@@ -87,38 +110,38 @@ set $ws28 "28"
 set $ws29 "29"
 set $ws30 "30"
 
-workspace $ws1 output HDMI-A-1
-workspace $ws2 output HDMI-A-1
-workspace $ws3 output HDMI-A-1
-workspace $ws4 output HDMI-A-1
-workspace $ws5 output HDMI-A-1
-workspace $ws6 output HDMI-A-1
-workspace $ws7 output HDMI-A-1
-workspace $ws8 output HDMI-A-1
-workspace $ws9 output HDMI-A-1
-workspace $ws10 output HDMI-A-1
+workspace $ws1 output $output_main
+workspace $ws2 output $output_main
+workspace $ws3 output $output_main
+workspace $ws4 output $output_main
+workspace $ws5 output $output_main
+workspace $ws6 output $output_main
+workspace $ws7 output $output_main
+workspace $ws8 output $output_main
+workspace $ws9 output $output_main
+workspace $ws10 output $output_main
 
-workspace $ws11 output DVI-D-1
-workspace $ws12 output DVI-D-1
-workspace $ws13 output DVI-D-1
-workspace $ws14 output DVI-D-1
-workspace $ws15 output DVI-D-1
-workspace $ws16 output DVI-D-1
-workspace $ws17 output DVI-D-1
-workspace $ws18 output DVI-D-1
-workspace $ws19 output DVI-D-1
-workspace $ws20 output DVI-D-1
+workspace $ws11 output $output_top
+workspace $ws12 output $output_top
+workspace $ws13 output $output_top
+workspace $ws14 output $output_top
+workspace $ws15 output $output_top
+workspace $ws16 output $output_top
+workspace $ws17 output $output_top
+workspace $ws18 output $output_top
+workspace $ws19 output $output_top
+workspace $ws20 output $output_top
 
-workspace $ws21 output DP-2
-workspace $ws22 output DP-2
-workspace $ws23 output DP-2
-workspace $ws24 output DP-2
-workspace $ws25 output DP-2
-workspace $ws26 output DP-2
-workspace $ws27 output DP-2
-workspace $ws28 output DP-2
-workspace $ws29 output DP-2
-workspace $ws30 output DP-2
+workspace $ws21 output $output_right
+workspace $ws22 output $output_right
+workspace $ws23 output $output_right
+workspace $ws24 output $output_right
+workspace $ws25 output $output_right
+workspace $ws26 output $output_right
+workspace $ws27 output $output_right
+workspace $ws28 output $output_right
+workspace $ws29 output $output_right
+workspace $ws30 output $output_right
 
 bindsym $mod+q workspace number $ws1
 bindsym $mod+w workspace number $ws2
@@ -156,16 +179,10 @@ mode "resize" {
 
 bindsym $mod+b mode "resize"
 
-for_window [class="^.*"] border none
-default_border none
-gaps inner 10
-gaps outer 15
-smart_gaps on
-
 exec redshift
 exec mako
 exec udiskie
 exec yams
 #exec mpd_discord_richpresence -p=6601 --no-idle --fork
 exec bash ~/scripts/workspacekeys.sh
-exec swaymsg focus output HDMI-A-1
+exec swaymsg focus output $output_main
