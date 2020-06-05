@@ -4,17 +4,17 @@ set $output_main DP-3
 set $output_top HDMI-A-1
 set $output_right DP-1
 
-output $output_right pos 1920 1080 res 1920x1080 subpixel rgb bg /home/c/Pictures/wallpaper.png fill
-output $output_main pos 0 1080 res 1920x1080@144Hz subpixel rgb bg /home/c/Pictures/wallpaper.png fill
-output $output_top pos 0 0 res 1920x1080 subpixel rgb bg /home/c/Pictures/wallpaper.png fill 
+output $output_right pos 1920 0 res 1920x1080 subpixel rgb bg /home/c/Pictures/wallpaper.png fill max_render_time 1
+output $output_top pos 0 0 res 1920x1080 subpixel rgb bg /home/c/Pictures/wallpaper.png fill max_render_time 1
 
 bar {
         swaybar_command waybar
 }
 
-input "9610:51:SINOWEALTH_Wired_Gaming_Mouse_Keyboard" events disabled
+input "9610:51:Glorious_Model_D_Keyboard" events disabled
+input "9610:51:Glorious_Model_D_Consumer_Control" events disabled
 
-input "9610:51:SINOWEALTH_Wired_Gaming_Mouse" {
+input "9610:51:Glorious_Model_D" {
     accel_profile flat
     pointer_accel 0
 }
@@ -29,7 +29,13 @@ exec swayidle -w \
               resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -c 000000 -i $lock_bg'
 
-for_window [class="^.*"] inhibit_idle fullscreen for_window [app_id="^.*"] inhibit_idle fullscreen
+for_window [class="^.*"] inhibit_idle fullscreen
+for_window [app_id="^.*"] inhibit_idle fullscreen
+
+default_border none
+gaps inner 10
+gaps outer 15
+smart_gaps on
 
 set $up k
 set $down j
@@ -37,13 +43,6 @@ set $left h
 set $right l
 
 set $mod Mod4
-
-#for_window [class="^.*"] border none
-default_border none
-gaps inner 10
-gaps outer 15
-smart_gaps on
-
 floating_modifier $mod
 
 bindsym $mod+Return exec alacritty
@@ -58,9 +57,10 @@ bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
-bindsym $mod+a focus output $output_top
-bindsym $mod+z focus output $output_main
+bindsym $mod+z focus output $output_top
 bindsym $mod+x focus output $output_right
+bindsym $mod+Control+z move output $output_top, focus output $output_top
+bindsym $mod+Control+x move output $output_right, focus output $output_right
 bindsym $mod+s split toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+g layout toggle tabbed splith
@@ -99,49 +99,27 @@ set $ws18 "18"
 set $ws19 "19"
 set $ws20 "20"
 
-set $ws21 "21"
-set $ws22 "22"
-set $ws23 "23"
-set $ws24 "24"
-set $ws25 "25"
-set $ws26 "26"
-set $ws27 "27"
-set $ws28 "28"
-set $ws29 "29"
-set $ws30 "30"
+workspace $ws1 output $output_top
+workspace $ws2 output $output_top
+workspace $ws3 output $output_top
+workspace $ws4 output $output_top
+workspace $ws5 output $output_top
+workspace $ws6 output $output_top
+workspace $ws7 output $output_top
+workspace $ws8 output $output_top
+workspace $ws9 output $output_top
+workspace $ws10 output $output_top
 
-workspace $ws1 output $output_main
-workspace $ws2 output $output_main
-workspace $ws3 output $output_main
-workspace $ws4 output $output_main
-workspace $ws5 output $output_main
-workspace $ws6 output $output_main
-workspace $ws7 output $output_main
-workspace $ws8 output $output_main
-workspace $ws9 output $output_main
-workspace $ws10 output $output_main
-
-workspace $ws11 output $output_top
-workspace $ws12 output $output_top
-workspace $ws13 output $output_top
-workspace $ws14 output $output_top
-workspace $ws15 output $output_top
-workspace $ws16 output $output_top
-workspace $ws17 output $output_top
-workspace $ws18 output $output_top
-workspace $ws19 output $output_top
-workspace $ws20 output $output_top
-
-workspace $ws21 output $output_right
-workspace $ws22 output $output_right
-workspace $ws23 output $output_right
-workspace $ws24 output $output_right
-workspace $ws25 output $output_right
-workspace $ws26 output $output_right
-workspace $ws27 output $output_right
-workspace $ws28 output $output_right
-workspace $ws29 output $output_right
-workspace $ws30 output $output_right
+workspace $ws11 output $output_right
+workspace $ws12 output $output_right
+workspace $ws13 output $output_right
+workspace $ws14 output $output_right
+workspace $ws15 output $output_right
+workspace $ws16 output $output_right
+workspace $ws17 output $output_right
+workspace $ws18 output $output_right
+workspace $ws19 output $output_right
+workspace $ws20 output $output_right
 
 bindsym $mod+q workspace number $ws1
 bindsym $mod+w workspace number $ws2
@@ -183,6 +161,5 @@ exec redshift
 exec mako
 exec udiskie
 exec yams
-#exec mpd_discord_richpresence -p=6601 --no-idle --fork
 exec bash ~/scripts/workspacekeys.sh
 exec swaymsg focus output $output_main
