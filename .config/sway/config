@@ -21,13 +21,10 @@ input "9610:51:Glorious_Model_D" {
 
 seat * hide_cursor 3000
 
-set $lock_bg ~/Pictures/purple.jpg
-
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000 -i $lock_bg' \
+         timeout 300 'swaylock --indicator --screenshot --grace 5 --effect-pixelate 30 --clock --inside-color 00000000 --ring-color 00000000 --line-color 00000000 --indicator-radius 150 --text-color ffffffff' \
          timeout 600 'swaymsg "output * dpms off"' \
               resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -c 000000 -i $lock_bg'
 
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
