@@ -12,12 +12,12 @@ HISTFILE=~/.zsh_history
 
 # aliases
 alias ls='lsd -hA --group-dirs first'
-alias windows-reboot='sudo grub-reboot "Windows 10" && sudo reboot'
+alias windows='sudo grub-reboot "Windows 10" && sudo reboot'
 alias hdmi='pactl load-module module-loopback latency_msec=1'
 alias unload='pactl unload-module module-loopback | pactl unload-module module-null-sink | pactl unload-module module-combine-sink'
-alias monaudio='bash ~/scripts/monaudio.sh'
-alias mon='bash ~/scripts/mon.sh' #Wayland
-alias monx='bash ~/scripts/Mon2Cam.sh'
+alias monaudio='bash ~/scripts/mon_audio.sh'
+alias mon='bash ~/scripts/mon_wayland.sh' #Wayland
+alias monx='bash ~/scripts/mon_x11.sh'
 alias bios='systemctl reboot --firmware-setup'
 alias cleanup='sudo pacman -Rsn $(pacman -Qdtq); sudo pacman -Sc'
 alias cemu='bash ~/HDD/.cemu/LaunchCEMU'

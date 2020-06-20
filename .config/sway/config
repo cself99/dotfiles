@@ -145,27 +145,27 @@ workspace $ws28 output $output_right
 workspace $ws29 output $output_right
 workspace $ws30 output $output_right
 
-bindsym $mod+q workspace number $ws1
-bindsym $mod+w workspace number $ws2
-bindsym $mod+e workspace number $ws3
-bindsym $mod+r workspace number $ws4
-bindsym $mod+t workspace number $ws5
-bindsym $mod+y workspace number $ws6
-bindsym $mod+u workspace number $ws7
-bindsym $mod+i workspace number $ws8
-bindsym $mod+o workspace number $ws9
-bindsym $mod+p workspace number $ws10
+bindsym $mod+q exec ~/scripts/sway/q.sh
+bindsym $mod+w exec ~/scripts/sway/w.sh
+bindsym $mod+e exec ~/scripts/sway/e.sh
+bindsym $mod+r exec ~/scripts/sway/r.sh
+bindsym $mod+t exec ~/scripts/sway/t.sh
+bindsym $mod+y exec ~/scripts/sway/y.sh
+bindsym $mod+u exec ~/scripts/sway/u.sh
+bindsym $mod+i exec ~/scripts/sway/i.sh
+bindsym $mod+o exec ~/scripts/sway/o.sh
+bindsym $mod+p exec ~/scripts/sway/p.sh
 
-bindsym $mod+Shift+q move container to workspace number $ws1
-bindsym $mod+Shift+w move container to workspace number $ws2
-bindsym $mod+Shift+e move container to workspace number $ws3
-bindsym $mod+Shift+r move container to workspace number $ws4
-bindsym $mod+Shift+t move container to workspace number $ws5
-bindsym $mod+Shift+y move container to workspace number $ws6
-bindsym $mod+Shift+u move container to workspace number $ws7
-bindsym $mod+Shift+i move container to workspace number $ws8
-bindsym $mod+Shift+o move container to workspace number $ws9
-bindsym $mod+Shift+p move container to workspace number $ws10
+bindsym $mod+Shift+q exec ~/scripts/sway/moveq.sh
+bindsym $mod+Shift+w exec ~/scripts/sway/movew.sh
+bindsym $mod+Shift+e exec ~/scripts/sway/movee.sh 
+bindsym $mod+Shift+r exec ~/scripts/sway/mover.sh
+bindsym $mod+Shift+t exec ~/scripts/sway/movet.sh
+bindsym $mod+Shift+y exec ~/scripts/sway/movey.sh
+bindsym $mod+Shift+u exec ~/scripts/sway/moveu.sh
+bindsym $mod+Shift+i exec ~/scripts/sway/movei.sh
+bindsym $mod+Shift+o exec ~/scripts/sway/moveo.sh
+bindsym $mod+Shift+p exec ~/scripts/sway/movep.sh
 
 mode "resize" {
 
@@ -184,5 +184,4 @@ bindsym $mod+b mode "resize"
 exec mako
 exec udiskie
 exec yams
-exec bash ~/scripts/workspacekeys.sh
 exec swaymsg focus output $output_main
