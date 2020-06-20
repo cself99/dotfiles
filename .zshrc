@@ -17,8 +17,13 @@ alias hdmi='pactl load-module module-loopback latency_msec=1'
 alias unload='pactl unload-module module-loopback | pactl unload-module module-null-sink | pactl unload-module module-combine-sink'
 alias monaudio='bash ~/scripts/monaudio.sh'
 alias mon='bash ~/scripts/mon.sh' #Wayland
+alias monx='bash ~/scripts/Mon2Cam.sh'
 alias bios='systemctl reboot --firmware-setup'
 alias cleanup='sudo pacman -Rsn $(pacman -Qdtq); sudo pacman -Sc'
+alias cemu='bash ~/HDD/.cemu/LaunchCEMU'
+alias cemubotw='bash ~/HDD/.cemu/LaunchCEMUgcn3BOTW'
+alias sw='python ~/scripts/swallow'
+alias yuzu='QT_QPA_PLATFORM=xcb python ~/scripts/swallow /home/c/HDD/Emulator/Switch/yuzu'
 
 # ls after cd
 function chpwd() {

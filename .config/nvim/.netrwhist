@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/c/.config/i3'
 let g:netrw_dirhist_2='/home/c/.rtorrent'
 let g:netrw_dirhist_1='/home/c'
 let g:netrw_dirhist_0='/home/c/.rtorrent.session'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_7='/home/c/.rtorrent/watch'
 let g:netrw_dirhist_6='/home/c/.rtorrent/watch/load'
 let g:netrw_dirhist_5='/home/c/.rtorrent/watch'
 let g:netrw_dirhist_4='/home/c/.rtorrent'
-let g:netrw_dirhist_3='/home/c/.rtorrent/log'

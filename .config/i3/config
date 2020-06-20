@@ -1,35 +1,8 @@
 font pango:SF Mono 10
 
 set $output_main DP-3
-set $output_top HDMI-A-1
+set $output_top HDMI-1
 set $output_right DP-1
-
-output $output_main pos 0 1080 res 1920x1080@144Hz bg /home/c/Pictures/wallpaper.png fill max_render_time 3 adaptive_sync on
-output $output_right pos 1920 1080 res 1920x1080 bg /home/c/Pictures/wallpaper.png fill max_render_time 3
-output $output_top pos 0 0 res 1920x1080 bg /home/c/Pictures/wallpaper.png fill max_render_time 3
-
-bar {
-        swaybar_command waybar
-}
-
-input "9610:51:Glorious_Model_D" {
-    accel_profile flat
-    pointer_accel 0
-}
-
-seat * hide_cursor 3000
-
-set $lock 'swaylock --indicator --screenshot --grace 5 --effect-pixelate 30 --clock --inside-color 00000000 --ring-color 00000000 --line-color 00000000 --indicator-radius 150 --text-color ffffffff'
-
-exec swayidle -w \
-         timeout 600 $lock \
-         timeout 900 'swaymsg "output * dpms off"' \
-         timeout 15 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
-         resume 'swaymsg "output * dpms on"' \
-         before-sleep $lock
-
-for_window [class="^.*"] inhibit_idle fullscreen
-for_window [app_id="^.*"] inhibit_idle fullscreen
 
 default_border none
 gaps inner 10
@@ -47,7 +20,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+a kill
 bindsym $mod+Shift+c reload
-bindsym $mod+d exec wofi --show drun
+bindsym $mod+d exec rofi -show drun
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -56,7 +29,6 @@ bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
-bindsym $mod+m [class=discord] focus; exec ydotool key ctrl+Backspace
 bindsym $mod+a focus output $output_top
 bindsym $mod+z focus output $output_main
 bindsym $mod+x focus output $output_right
@@ -72,7 +44,7 @@ bindsym $mod+n move scratchpad
 bindsym $mod+Shift+n scratchpad show
 bindsym $mod+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod+Down exec pactl -- set-sink-volume @DEFAULT_SINK@ -5%
-bindsym $mod+Shift+s exec grim -g "$(slurp)" -t png - | wl-copy -t image/png && wl-paste > /home/c/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')
+bindsym $mod+Shift+s exec "maim -s | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > ~/Pictures/Screenshots/$(date +%F-%H:%M:%S).png"
 
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
@@ -145,27 +117,27 @@ workspace $ws28 output $output_right
 workspace $ws29 output $output_right
 workspace $ws30 output $output_right
 
-bindsym $mod+q workspace number $ws1
-bindsym $mod+w workspace number $ws2
-bindsym $mod+e workspace number $ws3
-bindsym $mod+r workspace number $ws4
-bindsym $mod+t workspace number $ws5
-bindsym $mod+y workspace number $ws6
-bindsym $mod+u workspace number $ws7
-bindsym $mod+i workspace number $ws8
-bindsym $mod+o workspace number $ws9
-bindsym $mod+p workspace number $ws10
+bindsym $mod+q exec bash ~/scripts/i3/q.sh
+bindsym $mod+w exec bash ~/scripts/i3/w.sh
+bindsym $mod+e exec bash ~/scripts/i3/e.sh
+bindsym $mod+r exec bash ~/scripts/i3/r.sh
+bindsym $mod+t exec bash ~/scripts/i3/t.sh
+bindsym $mod+y exec bash ~/scripts/i3/y.sh
+bindsym $mod+u exec bash ~/scripts/i3/u.sh
+bindsym $mod+i exec bash ~/scripts/i3/i.sh
+bindsym $mod+o exec bash ~/scripts/i3/o.sh
+bindsym $mod+p exec bash ~/scripts/i3/p.sh
 
-bindsym $mod+Shift+q move container to workspace number $ws1
-bindsym $mod+Shift+w move container to workspace number $ws2
-bindsym $mod+Shift+e move container to workspace number $ws3
-bindsym $mod+Shift+r move container to workspace number $ws4
-bindsym $mod+Shift+t move container to workspace number $ws5
-bindsym $mod+Shift+y move container to workspace number $ws6
-bindsym $mod+Shift+u move container to workspace number $ws7
-bindsym $mod+Shift+i move container to workspace number $ws8
-bindsym $mod+Shift+o move container to workspace number $ws9
-bindsym $mod+Shift+p move container to workspace number $ws10
+bindsym $mod+Shift+q exec bash ~/scripts/i3/moveq.sh
+bindsym $mod+Shift+w exec bash ~/scripts/i3/movew.sh
+bindsym $mod+Shift+e exec bash ~/scripts/i3/movee.sh
+bindsym $mod+Shift+r exec bash ~/scripts/i3/mover.sh
+bindsym $mod+Shift+t exec bash ~/scripts/i3/movet.sh 
+bindsym $mod+Shift+y exec bash ~/scripts/i3/movey.sh
+bindsym $mod+Shift+u exec bash ~/scripts/i3/moveu.sh
+bindsym $mod+Shift+i exec bash ~/scripts/i3/movei.sh
+bindsym $mod+Shift+o exec bash ~/scripts/i3/moveo.sh
+bindsym $mod+Shift+p exec bash ~/scripts/i3/movep.sh
 
 mode "resize" {
 
@@ -181,8 +153,11 @@ mode "resize" {
 
 bindsym $mod+b mode "resize"
 
-exec mako
 exec udiskie
 exec yams
-exec bash ~/scripts/workspacekeys.sh
-exec swaymsg focus output $output_main
+exec unclutter
+exec polybar one_main
+exec polybar one_top
+exec polybar one_right
+exec i3-msg workspace 1
+
