@@ -1,0 +1,14 @@
+game:
+  args: +r_renderapi 1 +com_skipIntroVideo 1 +com_skipKeyPressOnLoadScreens 1
+  exe: /home/c/HDD/Games/DOOM/DOOMx64vk.exe
+system:
+  env:
+    VK_ICD_FILENAMES: /opt/amdgpu-pro/etc/vulkan/icd.d/amd_icd64.json
+    WINEDEBUG: '"-all"'
+    WINEESYNC: '0'
+    WINEFSYNC: '0'
+  xephyr_fullscreen: false
+wine:
+  autoconf_joypad: false
+  dxvk: false
+  version: system

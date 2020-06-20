@@ -1,0 +1,7 @@
+game:
+  appid: chiaki
+  args: ''
+  exe: /usr/bin/chiaki
+linux: {}
+system:
+  disable_runtime: true

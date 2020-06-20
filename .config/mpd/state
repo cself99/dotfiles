@@ -1,0 +1,27 @@
+sw_volume: 33
+audio_device_state:1:pulse audio
+state: pause
+current: 0
+time: 35.447000
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Yung Lean/Warlord/01 Immortal.m4a
+1:Yung Lean/Warlord/02 Highway Patrol (feat. Bladee).m4a
+2:Yung Lean/Warlord/03 Fantasy (feat. Lil Flash).m4a
+3:Yung Lean/Warlord/04 Afghanistan.m4a
+4:Yung Lean/Warlord/05 Hoover.m4a
+5:Yung Lean/Warlord/06 Fire.m4a
+6:Yung Lean/Warlord/07 Stay Down.m4a
+7:Yung Lean/Warlord/08 Eye Contact.m4a
+8:Yung Lean/Warlord/09 More Stacks.m4a
+9:Yung Lean/Warlord/10 Af1s (feat. Ecco2k).m4a
+10:Yung Lean/Warlord/11 Hocus Pocus (feat. Bladee).m4a
+11:Yung Lean/Warlord/12 Shawty U Know What It Do.m4a
+12:Yung Lean/Warlord/13 Miami Ultras.m4a
+playlist_end

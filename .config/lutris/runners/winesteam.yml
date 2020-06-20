@@ -1,0 +1,6 @@
+system:
+  prelaunch_wait: false
+winesteam:
+  WineDesktop: 2560x1440
+  custom_wine_path: ''
+  esync: true

@@ -1,0 +1,5 @@
+game:
+  exe: /home/c/HDD/Games/Sekiro/sekiro.exe
+system: {}
+wine:
+  show_debug: ''

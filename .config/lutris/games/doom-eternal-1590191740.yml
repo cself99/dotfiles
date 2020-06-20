@@ -1,0 +1,21 @@
+game:
+  arch: win64
+  args: +com_skipSignInManager 1
+  exe: /home/c/HDD/Games/DOOMEternal/DOOMEternal/DOOMEternalx64vk.exe
+system:
+  aco: false
+  disable_runtime: true
+  env:
+    ? ''
+    : ''
+    VK_ICD_FILENAMES: /opt/amdgpu-pro/etc/vulkan/icd.d/amd_icd64.json
+    WINEESYNC: '0'
+    WINEFSYNC: '0'
+  prefer_system_libs: true
+  vk_icd: ''
+  xephyr_fullscreen: false
+wine:
+  autoconf_joypad: false
+  dxvk: false
+  esync: false
+  version: system

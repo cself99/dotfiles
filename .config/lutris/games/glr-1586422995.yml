@@ -1,0 +1,12 @@
+game:
+  arch: auto
+  exe: /home/c/.local/share/lutris/runners/winesteam/prefix64/drive_c/Program Files
+    (x86)/Steam/DD.exe
+  prefix: ~/.local/share/lutris/runners/winesteam/prefix64
+system: {}
+wine:
+  custom_wine_path: /home/c/.steam/root/compatibilitytools.d/Proton-5.4-GE-3/dist/bin/wine64
+  esync: true
+  show_debug: ''
+  system_winetricks: true
+  version: Proton-5.4-GE-3

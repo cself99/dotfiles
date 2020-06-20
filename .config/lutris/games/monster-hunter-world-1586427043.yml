@@ -1,0 +1,9 @@
+game:
+  appid: '582010'
+  run_without_steam: true
+  steamless_binary: /home/c/HDD/SteamLibrary/steamapps/common/Monster Hunter World/MonsterHunterWorld.exe
+system: {}
+winesteam:
+  sandbox: false
+  sandbox_dir: ~/asd
+  version: Proton-5.4-GE-3
