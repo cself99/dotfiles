@@ -5,8 +5,8 @@ set $output_top HDMI-A-1
 set $output_right DP-1
 
 output $output_main pos 0 1080 res 1920x1080@144Hz bg /home/c/Pictures/wallpaper.png fill max_render_time 3 adaptive_sync on
-output $output_right pos 1920 1080 res 1920x1080 bg /home/c/Pictures/wallpaper.png fill max_render_time 3
-output $output_top pos 0 0 res 1920x1080 bg /home/c/Pictures/wallpaper.png fill max_render_time 3
+output $output_right pos 1920 1080 res 1920x1080 bg /home/c/Pictures/wallpaper.png fill max_render_time 5
+output $output_top pos 0 0 res 1920x1080 bg /home/c/Pictures/wallpaper.png fill max_render_time 5
 
 bar {
         swaybar_command waybar
@@ -181,6 +181,7 @@ mode "resize" {
 
 bindsym $mod+b mode "resize"
 
+exec mpd
 exec mako
 exec udiskie
 exec yams

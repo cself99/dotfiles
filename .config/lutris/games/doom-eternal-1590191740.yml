@@ -4,18 +4,15 @@ game:
   exe: /home/c/HDD/Games/DOOMEternal/DOOMEternal/DOOMEternalx64vk.exe
 system:
   aco: false
-  disable_runtime: true
+  disable_runtime: false
   env:
-    ? ''
-    : ''
     VK_ICD_FILENAMES: /opt/amdgpu-pro/etc/vulkan/icd.d/amd_icd64.json
-    WINEESYNC: '0'
-    WINEFSYNC: '0'
-  prefer_system_libs: true
+  prefer_system_libs: false
   vk_icd: ''
   xephyr_fullscreen: false
 wine:
   autoconf_joypad: false
   dxvk: false
   esync: false
-  version: system
+  show_debug: -all
+  version: lutris-5.6-2-x86_64

@@ -20,7 +20,6 @@ set noshowmode
 set nofoldenable
 
 set clipboard=unnamedplus
-
 colorscheme onedark
 
 let g:lightline = {

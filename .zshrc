@@ -10,9 +10,15 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
+reboot_to_windows ()
+{
+    windows_title=$(sudo grep -i windows /boot/grub/grub.cfg | cut -d "'" -f 2)
+    sudo grub-reboot "$windows_title" && sudo reboot
+}
+
 # aliases
 alias ls='lsd -hA --group-dirs first'
-alias windows='sudo grub-reboot "Windows 10" && sudo reboot'
+alias windows='reboot_to_windows'
 alias hdmi='pactl load-module module-loopback latency_msec=1'
 alias unload='pactl unload-module module-loopback | pactl unload-module module-null-sink | pactl unload-module module-combine-sink'
 alias monaudio='bash ~/scripts/mon_audio.sh'
@@ -23,7 +29,7 @@ alias cleanup='sudo pacman -Rsn $(pacman -Qdtq); sudo pacman -Sc'
 alias cemu='bash ~/HDD/.cemu/LaunchCEMU'
 alias cemubotw='bash ~/HDD/.cemu/LaunchCEMUgcn3BOTW'
 alias sw='python ~/scripts/swallow'
-alias yuzu='QT_QPA_PLATFORM=xcb python ~/scripts/swallow /home/c/HDD/Emulator/Switch/yuzu'
+alias yuzu='vblank_mode=0 VK_ICD_FILENAMES=/opt/amdgpu-pro/etc/vulkan/icd.d/amd_icd64.json QT_QPA_PLATFORM=xcb python ~/scripts/swallow /home/c/HDD/Emulator/Switch/yuzu'
 
 # ls after cd
 function chpwd() {

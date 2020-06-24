@@ -1,5 +1,13 @@
 game:
   exe: /home/c/HDD/Games/Sekiro/sekiro.exe
-system: {}
+system:
+  env:
+    WINEDEBUG: -all
 wine:
+  overrides:
+    d3d11: n,b
+    dinput: d
+    dxgi: n,b
+    winedbg: d
   show_debug: ''
+  version: lutris-5.6-2-x86_64
