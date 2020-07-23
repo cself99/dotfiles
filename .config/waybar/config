@@ -1,8 +1,8 @@
 {
-    "layer": "top",
+    "layer": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": [],
-    "modules-right": ["mpd", "clock"],
+    "modules-center": ["clock#date"],
+    "modules-right": ["pulseaudio", "clock#time"],
     "sway/window": {
         "max-length": 50
     },
@@ -11,7 +11,7 @@
         "format-disconnected": "Disconnected",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
         "unknown-tag": "N/A",
-        "interval": 5,
+        "interval": 60,
         "consume-icons": {
             "on": " "
         },
@@ -36,10 +36,29 @@
         "tooltip-format": "MPD (connected)",
         "tooltip-format-disconnected": "MPD (disconnected)"
     },
-    "clock": {
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": " {icon} {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "default": ["", ""]
+            },
+        "on-click": "swaymsg exec 'amixer -q -D pulse sset Master toggle'"
+    },
+    "clock#time": {
         "interval": 60,
         "format": "{:%I:%M %p}",
         "max-length": 25,
         "tooltip": false
+    },
+    "clock#date": {
+        "interval": 2,
+        "format": "{:%A, %B %e}",
+        "max-length": 25,
+        "tooltip": false
     }
+
 }

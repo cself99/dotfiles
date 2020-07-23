@@ -1,0 +1,11 @@
+game:
+  exe: /home/c/HDD/.cemu/Cemu.exe
+system:
+  aco: true
+  env:
+    VK_ICD_FILENAMES: /usr/share/vulkan/icd.d/amd_icd64.json
+wine:
+  dxvk: false
+  esync: false
+  fsync: true
+  version: lutris-5.5-2-x86_64

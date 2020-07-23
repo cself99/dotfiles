@@ -1,9 +1,6 @@
 game:
-  exe: /home/c/.local/share/lutris/runners/winesteam/prefix64/drive_c/Program Files
-    (x86)/Steam/DD.exe
+  exe: /home/c/.local/share/lutris/runners/winesteam/prefix64/drive_c/users/c/Downloads/green/DLLInjector.exe
   prefix: ~/.local/share/lutris/runners/winesteam/prefix64
-  working_dir: ~/.local/share/lutris/runners/winesteam/prefix64/drive_c/Program Files
-    (x86)/Steam
 system:
   disable_runtime: false
   postexit_command: ''

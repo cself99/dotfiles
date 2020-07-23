@@ -11,9 +11,9 @@ export QT_WAYLAND_DISABLE_WINDOWDECORATION="1"
 export QT_QPA_PLATFORMTHEME=qt5ct
 export GTK_THEME=Arc-Dark
 export RADV_PERFTEST=aco
-export mesa_glthread=true
 export XDG_CURRENT_DESKTOP=sway
 export XDG_SESSION_TYPE=wayland
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/radeon_icd.x86_64.json
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   XKB_DEFAULT_LAYOUT=us exec sway

@@ -17,16 +17,10 @@ input "9610:51:Glorious_Model_D" {
     pointer_accel 0
 }
 
+input "9610:51:Glorious_Model_D_Keyboard" events disabled
+input "9610:51:Glorious_Model_D_Consumer_Control" events disabled
+
 seat * hide_cursor 3000
-
-set $lock 'swaylock --indicator --screenshot --grace 5 --effect-pixelate 30 --clock --inside-color 00000000 --ring-color 00000000 --line-color 00000000 --indicator-radius 150 --text-color ffffffff'
-
-exec swayidle -w \
-         timeout 600 $lock \
-         timeout 900 'swaymsg "output * dpms off"' \
-         timeout 15 'if pgrep -x swaylock; then swaymsg "output * dpms off"; fi' \
-         resume 'swaymsg "output * dpms on"' \
-         before-sleep $lock
 
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
@@ -48,6 +42,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+a kill
 bindsym $mod+Shift+c reload
 bindsym $mod+d exec wofi --show drun
+bindsym $mod+v exec clipman pick -t wofi
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -138,7 +133,7 @@ workspace $ws21 output $output_right
 workspace $ws22 output $output_right
 workspace $ws23 output $output_right
 workspace $ws24 output $output_right
-workspace $ws25 output $output_right
+workspace $ws25 output $output_rigt
 workspace $ws26 output $output_right
 workspace $ws27 output $output_right
 workspace $ws28 output $output_right
@@ -181,8 +176,8 @@ mode "resize" {
 
 bindsym $mod+b mode "resize"
 
-exec mpd
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec wl-paste -t text --watch clipman store
 exec mako
 exec udiskie
-exec yams
 exec swaymsg focus output $output_main
