@@ -2,10 +2,8 @@ font pango:SF Mono 10
 
 set $output_main DP-3
 set $output_top HDMI-A-1
-set $output_right DP-1
 
 output $output_main pos 0 1080 res 1920x1080@144Hz bg /home/c/Pictures/wallpaper.png fill max_render_time 3 adaptive_sync on
-output $output_right pos 1920 1080 res 1920x1080 bg /home/c/Pictures/wallpaper.png fill max_render_time 5
 output $output_top pos 0 0 res 1920x1080 bg /home/c/Pictures/wallpaper.png fill max_render_time 5
 
 bar {
@@ -42,7 +40,6 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+a kill
 bindsym $mod+Shift+c reload
 bindsym $mod+d exec wofi --show drun
-bindsym $mod+v exec clipman pick -t wofi
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -54,10 +51,8 @@ bindsym $mod+Shift+$right move right
 bindsym $mod+m [class=discord] focus; exec ydotool key ctrl+Backspace
 bindsym $mod+a focus output $output_top
 bindsym $mod+z focus output $output_main
-bindsym $mod+x focus output $output_right
 bindsym $mod+Control+a move output $output_top, focus output $output_top
 bindsym $mod+Control+z move output $output_main, focus output $output_main
-bindsym $mod+Control+x move output $output_right, focus output $output_right
 bindsym $mod+s split toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+g layout toggle tabbed splith
@@ -129,17 +124,6 @@ workspace $ws18 output $output_top
 workspace $ws19 output $output_top
 workspace $ws20 output $output_top
 
-workspace $ws21 output $output_right
-workspace $ws22 output $output_right
-workspace $ws23 output $output_right
-workspace $ws24 output $output_right
-workspace $ws25 output $output_rigt
-workspace $ws26 output $output_right
-workspace $ws27 output $output_right
-workspace $ws28 output $output_right
-workspace $ws29 output $output_right
-workspace $ws30 output $output_right
-
 bindsym $mod+q exec bash ~/scripts/sway/q.sh
 bindsym $mod+w exec bash ~/scripts/sway/w.sh
 bindsym $mod+e exec bash ~/scripts/sway/e.sh
@@ -162,6 +146,17 @@ bindsym $mod+Shift+i exec bash ~/scripts/sway/movei.sh
 bindsym $mod+Shift+o exec bash ~/scripts/sway/moveo.sh
 bindsym $mod+Shift+p exec bash ~/scripts/sway/movep.sh
 
+bindsym $mod+Control+q exec bash ~/scripts/sway/followq.sh
+bindsym $mod+Control+w exec bash ~/scripts/sway/followw.sh
+bindsym $mod+Control+e exec bash ~/scripts/sway/followe.sh
+bindsym $mod+Control+r exec bash ~/scripts/sway/followr.sh
+bindsym $mod+Control+t exec bash ~/scripts/sway/followt.sh
+bindsym $mod+Control+y exec bash ~/scripts/sway/followy.sh
+bindsym $mod+Control+u exec bash ~/scripts/sway/followu.sh
+bindsym $mod+Control+i exec bash ~/scripts/sway/followi.sh
+bindsym $mod+Control+o exec bash ~/scripts/sway/followo.sh
+bindsym $mod+Control+p exec bash ~/scripts/sway/followp.sh
+
 mode "resize" {
 
         bindsym $left resize shrink width 10 px or 10 ppt
@@ -177,7 +172,7 @@ mode "resize" {
 bindsym $mod+b mode "resize"
 
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec wl-paste -t text --watch clipman store
 exec mako
 exec udiskie
+exec autotiling
 exec swaymsg focus output $output_main

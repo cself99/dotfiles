@@ -1,0 +1,5 @@
+game:
+  args: -force-vulkan
+  exe: /home/c/HDD/LinuxGames/SUPERHOT MIND CONTROL DELETE/start.sh
+linux: {}
+system: {}

@@ -1,0 +1,6 @@
+game:
+  exe: /home/c/HDD/Games/Barony/barony.exe
+system: {}
+wine:
+  esync: true
+  fsync: true

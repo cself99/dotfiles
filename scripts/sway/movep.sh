@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 data=`swaymsg -t get_outputs | jq '[.[].focused] | index(true)'`
 if (( $data == 1 )); then
-    swaymsg move container to workspace 10
-elif (( $data == 2 )); then
     swaymsg move container to workspace 20
+#elif (( $data == 2 )); then
+#    swaymsg move container to workspace 20
 elif (( $data == 0 )); then
-    swaymsg move container to workspace 30
+    swaymsg move container to workspace 10
 fi
 

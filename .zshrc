@@ -14,15 +14,12 @@ reboot_to_windows ()
 
 alias ls='lsd -hA --group-dirs first'
 alias windows='reboot_to_windows'
-alias hdmi='pactl load-module module-loopback latency_msec=1'
-alias unload='pactl unload-module module-loopback | pactl unload-module module-null-sink | pactl unload-module module-combine-sink'
-alias monaudio='bash ~/scripts/mon_audio.sh'
 alias mon='bash ~/scripts/mon_wayland.sh'
 alias monx='bash ~/scripts/mon_x11.sh'
 alias bios='systemctl reboot --firmware-setup'
-alias cleanup='sudo pacman -Rsn $(pacman -Qdtq); sudo pacman -Sc'
+alias cleanup='sudo pacman -Rsn $(pacman -Qdtq); yay -Scc'
 alias sw='python ~/scripts/swallow'
-alias yuzu='VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_icd64.json QT_QPA_PLATFORM=xcb python ~/scripts/swallow /usr/bin/yuzu'
+alias yuzu='VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_icd64.json QT_QPA_PLATFORM=xcb python ~/scripts/swallow /home/c/HDD/Emulator/Switch/yuzu'
 
 function chpwd() {
     emulate -L zsh
@@ -61,6 +58,8 @@ function zle-keymap-select {
   fi
 }
 zle -N zle-keymap-select
+
+PROMPT_EOL_MARK=''
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
