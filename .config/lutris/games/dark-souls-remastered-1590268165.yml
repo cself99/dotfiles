@@ -1,5 +1,0 @@
-game:
-  exe: /home/c/HDD/Games/Dark.Souls.Remastered/DarkSoulsRemastered.exe
-system: {}
-wine:
-  show_debug: -all

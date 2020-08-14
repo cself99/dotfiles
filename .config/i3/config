@@ -2,7 +2,12 @@ font pango:SF Mono 10
 
 set $output_main DP-3
 set $output_top HDMI-1
-set $output_right DP-1
+
+exec feh --bg-scale /home/c/Pictures/wallpaper.png
+
+bar {
+    status_command i3status
+}
 
 default_border none
 gaps inner 10
@@ -20,7 +25,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+a kill
 bindsym $mod+Shift+c reload
-bindsym $mod+d exec rofi -show drun
+bindsym $mod+d exec bash ~/.config/rofi/launcher.sh
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -31,10 +36,8 @@ bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 bindsym $mod+a focus output $output_top
 bindsym $mod+z focus output $output_main
-bindsym $mod+x focus output $output_right
 bindsym $mod+Control+a move output $output_top, focus output $output_top
 bindsym $mod+Control+z move output $output_main, focus output $output_main
-bindsym $mod+Control+x move output $output_right, focus output $output_right
 bindsym $mod+s split toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+g layout toggle tabbed splith
@@ -73,17 +76,6 @@ set $ws18 "18"
 set $ws19 "19"
 set $ws20 "20"
 
-set $ws21 "21"
-set $ws22 "22"
-set $ws23 "23"
-set $ws24 "24"
-set $ws25 "25"
-set $ws26 "26"
-set $ws27 "27"
-set $ws28 "28"
-set $ws29 "29"
-set $ws30 "30"
-
 workspace $ws1 output $output_main
 workspace $ws2 output $output_main
 workspace $ws3 output $output_main
@@ -105,17 +97,6 @@ workspace $ws17 output $output_top
 workspace $ws18 output $output_top
 workspace $ws19 output $output_top
 workspace $ws20 output $output_top
-
-workspace $ws21 output $output_right
-workspace $ws22 output $output_right
-workspace $ws23 output $output_right
-workspace $ws24 output $output_right
-workspace $ws25 output $output_right
-workspace $ws26 output $output_right
-workspace $ws27 output $output_right
-workspace $ws28 output $output_right
-workspace $ws29 output $output_right
-workspace $ws30 output $output_right
 
 bindsym $mod+q exec bash ~/scripts/i3/q.sh
 bindsym $mod+w exec bash ~/scripts/i3/w.sh
@@ -156,8 +137,6 @@ bindsym $mod+b mode "resize"
 exec udiskie
 exec yams
 exec unclutter
-exec polybar one_main
-exec polybar one_top
-exec polybar one_right
+exec autotiling
 exec i3-msg workspace 1
 

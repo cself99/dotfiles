@@ -1,6 +1,0 @@
-game:
-  exe: /home/c/HDD/Games/Blasphemous/Blasphemous.exe
-system: {}
-wine:
-  show_debug: ''
-  version: system

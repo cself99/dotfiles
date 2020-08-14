@@ -1,9 +1,9 @@
-sw_volume: 44
+sw_volume: 50
 audio_device_state:1:pulse audio
 state: pause
-current: 0
-time: 346.573000
-random: 0
+current: 17
+time: 67.570000
+random: 1
 repeat: 0
 single: 0
 consume: 0
@@ -11,14 +11,23 @@ crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:George Clanton/Slide/01 - Livin' Loose.flac
-1:George Clanton/Slide/02 - Make It Forever.flac
-2:George Clanton/Slide/03 - Tie Me Down.flac
-3:George Clanton/Slide/04 - Dumb.flac
-4:George Clanton/Slide/05 - Blast Off.flac
-5:George Clanton/Slide/06 - Slide.flac
-6:George Clanton/Slide/07 - Monster.flac
-7:George Clanton/Slide/08 - You Lost Me There.flac
-8:George Clanton/Slide/09 - Encore.flac
-9:George Clanton/Slide/10 - Walk Slowly.flac
+0:Bladee/Icedancer/1 - SmartWater.flac
+1:Bladee/Icedancer/2 - OKK.flac
+2:Bladee/Icedancer/3 - Mallwhore Freeestyle.flac
+3:Bladee/Icedancer/4 - Be Nice 2 Me.flac
+4:Bladee/Icedancer/5 - Frosty the Snowman.flac
+5:Bladee/Icedancer/6 - Inside Out (feat. Yung Lean).flac
+6:Bladee/Icedancer/7 - Close.flac
+7:Bladee/Icedancer/8 - Jaws.flac
+8:Bladee/Icedancer/9 - Cartier'god Icedancer (Intermission).flac
+9:Bladee/Icedancer/10 - Side by Side (feat. Thaiboy Digital).flac
+10:Bladee/Icedancer/11 - Topman.flac
+11:Bladee/Icedancer/12 - Waster.flac
+12:Bladee/Icedancer/13 - Special Place.flac
+13:Bladee/Icedancer/14 - Dg Jeans.flac
+14:Bladee/Icedancer/15 - Feel Like.flac
+15:Bladee/Icedancer/16 - Linkdin.flac
+16:Bladee/Icedancer/17 - For Nothing.flac
+17:Bladee/Icedancer/18 - Anything.flac
+18:Bladee/Icedancer/19 - The Silent Boy Cries (Ripsquadd Outro).flac
 playlist_end

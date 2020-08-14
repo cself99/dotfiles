@@ -15,7 +15,7 @@ scrolling:
 
 font:
   normal:
-    family: SF Mono Powerline
+    family: SF Mono
     style: Medium
   size: 13.0
   glyph_offset:

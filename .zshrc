@@ -15,11 +15,9 @@ reboot_to_windows ()
 alias ls='lsd -hA --group-dirs first'
 alias windows='reboot_to_windows'
 alias mon='bash ~/scripts/mon_wayland.sh'
-alias monx='bash ~/scripts/mon_x11.sh'
 alias bios='systemctl reboot --firmware-setup'
 alias cleanup='sudo pacman -Rsn $(pacman -Qdtq); yay -Scc'
 alias sw='python ~/scripts/swallow'
-alias yuzu='VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/amd_icd64.json QT_QPA_PLATFORM=xcb python ~/scripts/swallow /home/c/HDD/Emulator/Switch/yuzu'
 
 function chpwd() {
     emulate -L zsh
@@ -62,4 +60,4 @@ zle -N zle-keymap-select
 PROMPT_EOL_MARK=''
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

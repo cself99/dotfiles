@@ -1,8 +1,0 @@
-game:
-  appid: '480'
-  run_without_steam: true
-  steamless_binary: /home/c/.local/share/lutris/runners/winesteam/prefix64/drive_c/Program
-    Files (x86)/Steam/DD.exe
-system: {}
-winesteam:
-  args: ''
