@@ -1,9 +1,10 @@
+exec xrandr --output DP-3 --primary --mode 1920x1080 --rate 144.00 --pos 0x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal 
+
 font pango:SF Mono 10
 
 set $output_main DP-3
 set $output_top HDMI-1
 
-exec feh --bg-scale /home/c/Pictures/wallpaper.png
 
 bar {
     status_command i3status
@@ -25,7 +26,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+a kill
 bindsym $mod+Shift+c reload
-bindsym $mod+d exec bash ~/.config/rofi/launcher.sh
+bindsym $mod+d exec rofi -show drun
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -134,9 +135,9 @@ mode "resize" {
 
 bindsym $mod+b mode "resize"
 
+exec export MOZ_ENABLE_WAYLAND=0
 exec udiskie
-exec yams
-exec unclutter
 exec autotiling
+exec feh --bg-scale /home/c/Pictures/bg.jpg
 exec i3-msg workspace 1
 

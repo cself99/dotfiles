@@ -3,8 +3,10 @@ font pango:SF Mono 10
 set $output_main DP-3
 set $output_top HDMI-A-1
 
-output $output_main pos 0 1080 res 1920x1080@144Hz bg /home/c/Pictures/wallpaper.png fill adaptive_sync on
-output $output_top pos 0 0 res 1920x1080 bg /home/c/Pictures/wallpaper.png fill
+set $wallpaper /home/c/Pictures/bg.jpg
+
+output $output_main pos 0 1080 res 1920x1080@144Hz bg /home/c/Pictures/bg.jpg fill adaptive_sync on
+output $output_top pos 0 0 res 1920x1080 bg $wallpaper fill
 
 bar {
         swaybar_command waybar
@@ -18,16 +20,17 @@ input "9610:51:Glorious_Model_D" {
 input "9610:51:Glorious_Model_D_Keyboard" events disabled
 input "9610:51:Glorious_Model_D_Consumer_Control" events disabled
 
-seat * hide_cursor 3000
-
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
 for_window [title="NoiseTorch"] floating enable
+for_window [app_id="hudkit"] floating enable
 
 default_border none
 gaps inner 10
 gaps outer 15
 smart_gaps on
+smart_borders on
+focus_follows_mouse yes
 
 set $up k
 set $down j
@@ -125,38 +128,38 @@ workspace $ws18 output $output_top
 workspace $ws19 output $output_top
 workspace $ws20 output $output_top
 
-bindsym $mod+q exec bash ~/scripts/sway/q.sh
-bindsym $mod+w exec bash ~/scripts/sway/w.sh
-bindsym $mod+e exec bash ~/scripts/sway/e.sh
-bindsym $mod+r exec bash ~/scripts/sway/r.sh
-bindsym $mod+t exec bash ~/scripts/sway/t.sh
-bindsym $mod+y exec bash ~/scripts/sway/y.sh
-bindsym $mod+u exec bash ~/scripts/sway/u.sh
-bindsym $mod+i exec bash ~/scripts/sway/i.sh
-bindsym $mod+o exec bash ~/scripts/sway/o.sh
-bindsym $mod+p exec bash ~/scripts/sway/p.sh
+bindsym $mod+q exec bash ~/Scripts/sway/q.sh
+bindsym $mod+w exec bash ~/Scripts/sway/w.sh
+bindsym $mod+e exec bash ~/Scripts/sway/e.sh
+bindsym $mod+r exec bash ~/Scripts/sway/r.sh
+bindsym $mod+t exec bash ~/Scripts/sway/t.sh
+bindsym $mod+y exec bash ~/Scripts/sway/y.sh
+bindsym $mod+u exec bash ~/Scripts/sway/u.sh
+bindsym $mod+i exec bash ~/Scripts/sway/i.sh
+bindsym $mod+o exec bash ~/Scripts/sway/o.sh
+bindsym $mod+p exec bash ~/Scripts/sway/p.sh
 
-bindsym $mod+Shift+q exec bash ~/scripts/sway/moveq.sh
-bindsym $mod+Shift+w exec bash ~/scripts/sway/movew.sh
-bindsym $mod+Shift+e exec bash ~/scripts/sway/movee.sh 
-bindsym $mod+Shift+r exec bash ~/scripts/sway/mover.sh
-bindsym $mod+Shift+t exec bash ~/scripts/sway/movet.sh
-bindsym $mod+Shift+y exec bash ~/scripts/sway/movey.sh
-bindsym $mod+Shift+u exec bash ~/scripts/sway/moveu.sh
-bindsym $mod+Shift+i exec bash ~/scripts/sway/movei.sh
-bindsym $mod+Shift+o exec bash ~/scripts/sway/moveo.sh
-bindsym $mod+Shift+p exec bash ~/scripts/sway/movep.sh
+bindsym $mod+Shift+q exec bash ~/Scripts/sway/moveq.sh
+bindsym $mod+Shift+w exec bash ~/Scripts/sway/movew.sh
+bindsym $mod+Shift+e exec bash ~/Scripts/sway/movee.sh 
+bindsym $mod+Shift+r exec bash ~/Scripts/sway/mover.sh
+bindsym $mod+Shift+t exec bash ~/Scripts/sway/movet.sh
+bindsym $mod+Shift+y exec bash ~/Scripts/sway/movey.sh
+bindsym $mod+Shift+u exec bash ~/Scripts/sway/moveu.sh
+bindsym $mod+Shift+i exec bash ~/Scripts/sway/movei.sh
+bindsym $mod+Shift+o exec bash ~/Scripts/sway/moveo.sh
+bindsym $mod+Shift+p exec bash ~/Scripts/sway/movep.sh
 
-bindsym $mod+Control+q exec bash ~/scripts/sway/followq.sh
-bindsym $mod+Control+w exec bash ~/scripts/sway/followw.sh
-bindsym $mod+Control+e exec bash ~/scripts/sway/followe.sh
-bindsym $mod+Control+r exec bash ~/scripts/sway/followr.sh
-bindsym $mod+Control+t exec bash ~/scripts/sway/followt.sh
-bindsym $mod+Control+y exec bash ~/scripts/sway/followy.sh
-bindsym $mod+Control+u exec bash ~/scripts/sway/followu.sh
-bindsym $mod+Control+i exec bash ~/scripts/sway/followi.sh
-bindsym $mod+Control+o exec bash ~/scripts/sway/followo.sh
-bindsym $mod+Control+p exec bash ~/scripts/sway/followp.sh
+bindsym $mod+Control+q exec bash ~/Scripts/sway/followq.sh
+bindsym $mod+Control+w exec bash ~/Scripts/sway/followw.sh
+bindsym $mod+Control+e exec bash ~/Scripts/sway/followe.sh
+bindsym $mod+Control+r exec bash ~/Scripts/sway/followr.sh
+bindsym $mod+Control+t exec bash ~/Scripts/sway/followt.sh
+bindsym $mod+Control+y exec bash ~/Scripts/sway/followy.sh
+bindsym $mod+Control+u exec bash ~/Scripts/sway/followu.sh
+bindsym $mod+Control+i exec bash ~/Scripts/sway/followi.sh
+bindsym $mod+Control+o exec bash ~/Scripts/sway/followo.sh
+bindsym $mod+Control+p exec bash ~/Scripts/sway/followp.sh
 
 mode "resize" {
 
@@ -172,9 +175,10 @@ mode "resize" {
 
 bindsym $mod+b mode "resize"
 
+#exec /usr/lib/xdg-desktop-portal -r && /usr/lib/xdg-desktop-portal-wlr --output=DP-3
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
-exec gammastep
 exec udiskie
+exec redshift
 exec autotiling
 exec swaymsg focus output $output_main

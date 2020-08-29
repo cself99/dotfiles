@@ -2,7 +2,7 @@
     "layer": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock#date"],
-    "modules-right": ["pulseaudio", "clock#time"],
+    "modules-right": [ "pulseaudio", "clock#time"],
     "sway/window": {
         "max-length": 50
     },

@@ -12,12 +12,13 @@ reboot_to_windows ()
     sudo grub-reboot "$windows_title" && sudo reboot
 }
 
-alias ls='lsd -hA --group-dirs first'
 alias windows='reboot_to_windows'
-alias mon='bash ~/scripts/mon_wayland.sh'
+alias ls='lsd -hA --group-dirs first'
+alias mon='bash ~/Scripts/mon_wayland.sh'
 alias bios='systemctl reboot --firmware-setup'
 alias cleanup='sudo pacman -Rsn $(pacman -Qdtq); yay -Scc'
-alias sw='python ~/scripts/swallow'
+alias sw='python ~/Scripts/swallow'
+alias yuzu='vblank_mode=0 mesa_glthread=true QT_QPA_PLATFORM=xcb python ~/Scripts/swallow yuzu'
 
 function chpwd() {
     emulate -L zsh
@@ -59,5 +60,6 @@ zle -N zle-keymap-select
 
 PROMPT_EOL_MARK=''
 
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
