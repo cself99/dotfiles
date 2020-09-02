@@ -3,9 +3,9 @@ font pango:SF Mono 10
 set $output_main DP-3
 set $output_top HDMI-A-1
 
-set $wallpaper /home/c/Pictures/bg.jpg
+set $wallpaper /home/c/Pictures/bg.png
 
-output $output_main pos 0 1080 res 1920x1080@144Hz bg /home/c/Pictures/bg.jpg fill adaptive_sync on
+output $output_main pos 0 1080 res 1920x1080@144Hz bg $wallpaper fill adaptive_sync on max_render_time 1
 output $output_top pos 0 0 res 1920x1080 bg $wallpaper fill
 
 bar {
@@ -24,6 +24,7 @@ for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
 for_window [title="NoiseTorch"] floating enable
 for_window [app_id="hudkit"] floating enable
+for_window [app_id="ulauncher"] floating enable, border none
 
 default_border none
 gaps inner 10
@@ -43,7 +44,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+a kill
 bindsym $mod+Shift+c reload
-bindsym $mod+d exec wofi --show drun
+bindsym $mod+d exec ulauncher --hide-window
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -61,11 +62,11 @@ bindsym $mod+s split toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+g layout toggle tabbed splith
 bindsym $mod+space floating toggle
-bindsym $mod+c focus parent
+bindsym $mod+x focus parent
 bindsym $mod+n move scratchpad
 bindsym $mod+Shift+n scratchpad show
-bindsym $mod+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5%
-bindsym $mod+Down exec pactl -- set-sink-volume @DEFAULT_SINK@ -5%
+bindsym $mod+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5% && pamixer --get-volume > $SWAYSOCK.wob
+bindsym $mod+Down exec pactl -- set-sink-volume @DEFAULT_SINK@ -5% && pamixer --get-volume > $SWAYSOCK.wob
 bindsym $mod+Shift+s exec grim -g "$(slurp)" -t png - | wl-copy -t image/png && wl-paste > /home/c/Pictures/Screenshots/$(date +'%Y-%m-%d-%H%M%S.png')
 
 bindsym XF86AudioPlay exec mpc toggle
@@ -181,4 +182,5 @@ exec mako
 exec udiskie
 exec redshift
 exec autotiling
+exec mkfifo $SWAYSOCK.wob && tail -f $SWAYSOCK.wob | wob
 exec swaymsg focus output $output_main
