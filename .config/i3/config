@@ -1,10 +1,10 @@
-exec xrandr --output DP-3 --primary --mode 1920x1080 --rate 144.00 --pos 0x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal 
+exec xrandr --output DP-3 --primary --mode 1920x1080 --rate 144.00 --pos 0x1080 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 0x0 --rotate normal --output DP-2 --pos 1920x1080 --rotate normal
 
 font pango:SF Mono 10
 
 set $output_main DP-3
 set $output_top HDMI-1
-
+set $output_right DP-2
 
 bar {
     status_command i3status
@@ -77,6 +77,17 @@ set $ws18 "18"
 set $ws19 "19"
 set $ws20 "20"
 
+set $ws21 "21"
+set $ws22 "22"
+set $ws23 "23"
+set $ws24 "24"
+set $ws25 "25"
+set $ws26 "26"
+set $ws27 "27"
+set $ws28 "28"
+set $ws29 "29"
+set $ws30 "30"
+
 workspace $ws1 output $output_main
 workspace $ws2 output $output_main
 workspace $ws3 output $output_main
@@ -99,27 +110,38 @@ workspace $ws18 output $output_top
 workspace $ws19 output $output_top
 workspace $ws20 output $output_top
 
-bindsym $mod+q exec bash ~/scripts/i3/q.sh
-bindsym $mod+w exec bash ~/scripts/i3/w.sh
-bindsym $mod+e exec bash ~/scripts/i3/e.sh
-bindsym $mod+r exec bash ~/scripts/i3/r.sh
-bindsym $mod+t exec bash ~/scripts/i3/t.sh
-bindsym $mod+y exec bash ~/scripts/i3/y.sh
-bindsym $mod+u exec bash ~/scripts/i3/u.sh
-bindsym $mod+i exec bash ~/scripts/i3/i.sh
-bindsym $mod+o exec bash ~/scripts/i3/o.sh
-bindsym $mod+p exec bash ~/scripts/i3/p.sh
+workspace $ws21 output $output_right
+workspace $ws22 output $output_right
+workspace $ws23 output $output_right
+workspace $ws24 output $output_right
+workspace $ws25 output $output_right
+workspace $ws26 output $output_right
+workspace $ws27 output $output_right
+workspace $ws28 output $output_right
+workspace $ws29 output $output_right
+workspace $ws30 output $output_right
 
-bindsym $mod+Shift+q exec bash ~/scripts/i3/moveq.sh
-bindsym $mod+Shift+w exec bash ~/scripts/i3/movew.sh
-bindsym $mod+Shift+e exec bash ~/scripts/i3/movee.sh
-bindsym $mod+Shift+r exec bash ~/scripts/i3/mover.sh
-bindsym $mod+Shift+t exec bash ~/scripts/i3/movet.sh 
-bindsym $mod+Shift+y exec bash ~/scripts/i3/movey.sh
-bindsym $mod+Shift+u exec bash ~/scripts/i3/moveu.sh
-bindsym $mod+Shift+i exec bash ~/scripts/i3/movei.sh
-bindsym $mod+Shift+o exec bash ~/scripts/i3/moveo.sh
-bindsym $mod+Shift+p exec bash ~/scripts/i3/movep.sh
+bindsym $mod+q exec bash ~/Scripts/i3/q.sh
+bindsym $mod+w exec bash ~/Scripts/i3/w.sh
+bindsym $mod+e exec bash ~/Scripts/i3/e.sh
+bindsym $mod+r exec bash ~/Scripts/i3/r.sh
+bindsym $mod+t exec bash ~/Scripts/i3/t.sh
+bindsym $mod+y exec bash ~/Scripts/i3/y.sh
+bindsym $mod+u exec bash ~/Scripts/i3/u.sh
+bindsym $mod+i exec bash ~/Scripts/i3/i.sh
+bindsym $mod+o exec bash ~/Scripts/i3/o.sh
+bindsym $mod+p exec bash ~/Scripts/i3/p.sh
+
+bindsym $mod+Shift+q exec bash ~/Scripts/i3/moveq.sh
+bindsym $mod+Shift+w exec bash ~/Scripts/i3/movew.sh
+bindsym $mod+Shift+e exec bash ~/Scripts/i3/movee.sh
+bindsym $mod+Shift+r exec bash ~/Scripts/i3/mover.sh
+bindsym $mod+Shift+t exec bash ~/Scripts/i3/movet.sh 
+bindsym $mod+Shift+y exec bash ~/Scripts/i3/movey.sh
+bindsym $mod+Shift+u exec bash ~/Scripts/i3/moveu.sh
+bindsym $mod+Shift+i exec bash ~/Scripts/i3/movei.sh
+bindsym $mod+Shift+o exec bash ~/Scripts/i3/moveo.sh
+bindsym $mod+Shift+p exec bash ~/Scripts/i3/movep.sh
 
 mode "resize" {
 
@@ -135,7 +157,7 @@ mode "resize" {
 
 bindsym $mod+b mode "resize"
 
-exec export MOZ_ENABLE_WAYLAND=0
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec udiskie
 exec autotiling
 exec feh --bg-scale /home/c/Pictures/bg.jpg
