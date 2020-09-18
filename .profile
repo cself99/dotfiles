@@ -1,7 +1,6 @@
 export EDITOR=nvim
 export VISUAL=nvim
 export SYSTEMD_EDITOR=nvim
-export MOZ_ENABLE_WAYLAND=1
 export WINEESYNC=1
 export WINEFSYNC=1
 export MPD_HOST=127.0.0.1
@@ -12,5 +11,7 @@ export RADV_PERFTEST=aco
 export QT_QPA_PLATFORMTHEME=qt5ct
 export GTK_THEME=Arc-Dark
 export WINEPREFIX=~/HDD/.wine
-export MANGOHUD_CONFIG=toggle_hud=F10,toggle_logging=F3
 export XDG_CURRENT_DESKTOP=sway
+export MANGOHUD_CONFIG=toggle_hud=F10,toggle_logging=F3
+export NNN_TRASH=1
+systemctl --user import-environment; systemctl --user start graphical-session.target

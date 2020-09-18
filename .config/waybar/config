@@ -56,7 +56,7 @@
     },
     "clock#date": {
         "interval": 2,
-        "format": "{:%A, %B%e}",
+        "format": "{:%A, %B %e}",
         "max-length": 25,
         "tooltip": false
     }

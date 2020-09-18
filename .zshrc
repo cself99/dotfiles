@@ -18,7 +18,6 @@ alias mon='bash ~/Scripts/mon_wayland.sh'
 alias bios='systemctl reboot --firmware-setup'
 alias cleanup='sudo pacman -Rsn $(pacman -Qdtq); yay -Scc'
 alias sw='python ~/Scripts/swallow'
-alias yuzu='vblank_mode=0 mesa_glthread=true QT_QPA_PLATFORM=xcb python ~/Scripts/swallow yuzu'
 
 function chpwd() {
     emulate -L zsh

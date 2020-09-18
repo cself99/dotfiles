@@ -2,11 +2,13 @@ font pango:SF Mono 10
 
 set $output_main DP-3
 set $output_top HDMI-A-1
+set $output_right DP-2
 
 set $wallpaper /home/c/Pictures/bg.png
 
-output $output_main pos 0 1080 res 1920x1080@144Hz bg $wallpaper fill adaptive_sync on max_render_time 1
+output $output_main pos 0 1080 res 1920x1080@144Hz bg $wallpaper fill adaptive_sync on
 output $output_top pos 0 0 res 1920x1080 bg $wallpaper fill
+output $output_right pos 1920 1080 res 1920x1080 bg $wallpaper fill
 
 bar {
         swaybar_command waybar
@@ -20,13 +22,18 @@ input "9610:51:Glorious_Model_D" {
 input "9610:51:Glorious_Model_D_Keyboard" events disabled
 input "9610:51:Glorious_Model_D_Consumer_Control" events disabled
 
+assign [class="discord"] workspace 21
 for_window [class="^.*"] inhibit_idle fullscreen
 for_window [app_id="^.*"] inhibit_idle fullscreen
 for_window [title="NoiseTorch"] floating enable
 for_window [app_id="hudkit"] floating enable
 for_window [app_id="ulauncher"] floating enable, border none
+for_window [class="twitchui.exe"] floating enable
+for_window [class="battle.net.exe"] floating enable
+for_window [title="Wine System Tray"] move scratchpad
 
 default_border none
+default_floating_border none
 gaps inner 10
 gaps outer 15
 smart_gaps on
@@ -42,9 +49,9 @@ set $mod Mod4
 floating_modifier $mod
 
 bindsym $mod+Return exec alacritty
-bindsym $mod+Shift+a kill
+bindsym $mod+Shift+d kill
 bindsym $mod+Shift+c reload
-bindsym $mod+d exec ulauncher --hide-window
+bindsym $mod+d exec ulauncher-toggle
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
@@ -53,16 +60,21 @@ bindsym $mod+Shift+$left move left
 bindsym $mod+Shift+$down move down
 bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
-bindsym $mod+m [class=discord] focus; exec ydotool key ctrl+Backspace
+bindsym $mod+m exec xdotool key ctrl+shift+BackSpace
 bindsym $mod+a focus output $output_top
 bindsym $mod+z focus output $output_main
+bindsym $mod+x focus output $output_right
+bindsym $mod+Shift+a move output $output_top
+bindsym $mod+Shift+z move output $output_main
+bindsym $mod+Shift+x move output $output_right
 bindsym $mod+Control+a move output $output_top, focus output $output_top
 bindsym $mod+Control+z move output $output_main, focus output $output_main
+bindsym $mod+Control+x move output $output_right, focus output $output_right
 bindsym $mod+s split toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+g layout toggle tabbed splith
 bindsym $mod+space floating toggle
-bindsym $mod+x focus parent
+bindsym $mod+v focus parent
 bindsym $mod+n move scratchpad
 bindsym $mod+Shift+n scratchpad show
 bindsym $mod+Up exec pactl -- set-sink-volume @DEFAULT_SINK@ +5% && pamixer --get-volume > $SWAYSOCK.wob
@@ -129,38 +141,49 @@ workspace $ws18 output $output_top
 workspace $ws19 output $output_top
 workspace $ws20 output $output_top
 
-bindsym $mod+q exec bash ~/Scripts/sway/q.sh
-bindsym $mod+w exec bash ~/Scripts/sway/w.sh
-bindsym $mod+e exec bash ~/Scripts/sway/e.sh
-bindsym $mod+r exec bash ~/Scripts/sway/r.sh
-bindsym $mod+t exec bash ~/Scripts/sway/t.sh
-bindsym $mod+y exec bash ~/Scripts/sway/y.sh
-bindsym $mod+u exec bash ~/Scripts/sway/u.sh
-bindsym $mod+i exec bash ~/Scripts/sway/i.sh
-bindsym $mod+o exec bash ~/Scripts/sway/o.sh
-bindsym $mod+p exec bash ~/Scripts/sway/p.sh
+workspace $ws21 output $output_right
+workspace $ws22 output $output_right
+workspace $ws23 output $output_right
+workspace $ws24 output $output_right
+workspace $ws25 output $output_right
+workspace $ws26 output $output_right
+workspace $ws27 output $output_right
+workspace $ws28 output $output_right
+workspace $ws29 output $output_right
+workspace $ws30 output $output_right
 
-bindsym $mod+Shift+q exec bash ~/Scripts/sway/moveq.sh
-bindsym $mod+Shift+w exec bash ~/Scripts/sway/movew.sh
-bindsym $mod+Shift+e exec bash ~/Scripts/sway/movee.sh 
-bindsym $mod+Shift+r exec bash ~/Scripts/sway/mover.sh
-bindsym $mod+Shift+t exec bash ~/Scripts/sway/movet.sh
-bindsym $mod+Shift+y exec bash ~/Scripts/sway/movey.sh
-bindsym $mod+Shift+u exec bash ~/Scripts/sway/moveu.sh
-bindsym $mod+Shift+i exec bash ~/Scripts/sway/movei.sh
-bindsym $mod+Shift+o exec bash ~/Scripts/sway/moveo.sh
-bindsym $mod+Shift+p exec bash ~/Scripts/sway/movep.sh
+bindsym $mod+q exec bash ~/Scripts/swaytest/q.sh
+bindsym $mod+w exec bash ~/Scripts/swaytest/w.sh
+bindsym $mod+e exec bash ~/Scripts/swaytest/e.sh
+bindsym $mod+r exec bash ~/Scripts/swaytest/r.sh
+bindsym $mod+t exec bash ~/Scripts/swaytest/t.sh
+bindsym $mod+y exec bash ~/Scripts/swaytest/y.sh
+bindsym $mod+u exec bash ~/Scripts/swaytest/u.sh
+bindsym $mod+i exec bash ~/Scripts/swaytest/i.sh
+bindsym $mod+o exec bash ~/Scripts/swaytest/o.sh
+bindsym $mod+p exec bash ~/Scripts/swaytest/p.sh
 
-bindsym $mod+Control+q exec bash ~/Scripts/sway/followq.sh
-bindsym $mod+Control+w exec bash ~/Scripts/sway/followw.sh
-bindsym $mod+Control+e exec bash ~/Scripts/sway/followe.sh
-bindsym $mod+Control+r exec bash ~/Scripts/sway/followr.sh
-bindsym $mod+Control+t exec bash ~/Scripts/sway/followt.sh
-bindsym $mod+Control+y exec bash ~/Scripts/sway/followy.sh
-bindsym $mod+Control+u exec bash ~/Scripts/sway/followu.sh
-bindsym $mod+Control+i exec bash ~/Scripts/sway/followi.sh
-bindsym $mod+Control+o exec bash ~/Scripts/sway/followo.sh
-bindsym $mod+Control+p exec bash ~/Scripts/sway/followp.sh
+bindsym $mod+Shift+q exec bash ~/Scripts/swaytest/moveq.sh
+bindsym $mod+Shift+w exec bash ~/Scripts/swaytest/movew.sh
+bindsym $mod+Shift+e exec bash ~/Scripts/swaytest/movee.sh 
+bindsym $mod+Shift+r exec bash ~/Scripts/swaytest/mover.sh
+bindsym $mod+Shift+t exec bash ~/Scripts/swaytest/movet.sh
+bindsym $mod+Shift+y exec bash ~/Scripts/swaytest/movey.sh
+bindsym $mod+Shift+u exec bash ~/Scripts/swaytest/moveu.sh
+bindsym $mod+Shift+i exec bash ~/Scripts/swaytest/movei.sh
+bindsym $mod+Shift+o exec bash ~/Scripts/swaytest/moveo.sh
+bindsym $mod+Shift+p exec bash ~/Scripts/swaytest/movep.sh
+
+bindsym $mod+Control+q exec bash ~/Scripts/swaytest/followq.sh
+bindsym $mod+Control+w exec bash ~/Scripts/swaytest/followw.sh
+bindsym $mod+Control+e exec bash ~/Scripts/swaytest/followe.sh
+bindsym $mod+Control+r exec bash ~/Scripts/swaytest/followr.sh
+bindsym $mod+Control+t exec bash ~/Scripts/swaytest/followt.sh
+bindsym $mod+Control+y exec bash ~/Scripts/swaytest/followy.sh
+bindsym $mod+Control+u exec bash ~/Scripts/swaytest/followu.sh
+bindsym $mod+Control+i exec bash ~/Scripts/swaytest/followi.sh
+bindsym $mod+Control+o exec bash ~/Scripts/swaytest/followo.sh
+bindsym $mod+Control+p exec bash ~/Scripts/swaytest/followp.sh
 
 mode "resize" {
 
@@ -176,11 +199,13 @@ mode "resize" {
 
 bindsym $mod+b mode "resize"
 
-#exec /usr/lib/xdg-desktop-portal -r && /usr/lib/xdg-desktop-portal-wlr --output=DP-3
+exec /usr/lib/xdg-desktop-portal -r && /usr/lib/xdg-desktop-portal-wlr --output=DP-3
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec mako
 exec udiskie
-exec redshift
+exec ulauncher --hide-window
+exec gammastep
 exec autotiling
+exec discord
 exec mkfifo $SWAYSOCK.wob && tail -f $SWAYSOCK.wob | wob
 exec swaymsg focus output $output_main

@@ -6,14 +6,11 @@ set $output_main DP-3
 set $output_top HDMI-1
 set $output_right DP-2
 
-bar {
-    status_command i3status
-}
-
 default_border none
 gaps inner 10
-gaps outer 15
+gaps outer 5
 smart_gaps on
+new_float none
 
 set $up k
 set $down j
@@ -22,6 +19,8 @@ set $right l
 
 set $mod Mod4
 floating_modifier $mod
+
+for_window [class="battle.net.exe"] floating enable
 
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+a kill
@@ -37,8 +36,10 @@ bindsym $mod+Shift+$up move up
 bindsym $mod+Shift+$right move right
 bindsym $mod+a focus output $output_top
 bindsym $mod+z focus output $output_main
+bindsym $mod+x focus output $output_right
 bindsym $mod+Control+a move output $output_top, focus output $output_top
 bindsym $mod+Control+z move output $output_main, focus output $output_main
+bindsym $mod+Control+x move output $output_main, focus output $output_main
 bindsym $mod+s split toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+g layout toggle tabbed splith
@@ -160,6 +161,7 @@ bindsym $mod+b mode "resize"
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec udiskie
 exec autotiling
+exec redshift
 exec feh --bg-scale /home/c/Pictures/bg.jpg
 exec i3-msg workspace 1
-
+exec picom --experimental-backends -b
