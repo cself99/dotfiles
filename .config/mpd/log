@@ -8025,3 +8025,440 @@ Sep 18 06:28 : client: [9] closed
 Sep 18 06:28 : client: [8] closed
 Sep 18 06:28 : client: [11] closed
 Sep 18 06:28 : client: [10] closed
+Sep 18 13:07 : client: [12] opened from 127.0.0.1:57356
+Sep 18 13:07 : client: [12] closed
+Sep 18 13:07 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 13:09 : client: [13] opened from 127.0.0.1:58444
+Sep 18 13:09 : client: [13] closed
+Sep 18 13:11 : player: played "Bladee/Gluee/01 - Deletee (Intro).flac"
+Sep 18 13:13 : player: played "Bladee/Gluee/02 - Safehouse.flac"
+Sep 18 13:17 : player: played "Bladee/Gluee/03 - Ebay.flac"
+Sep 18 13:21 : player: played "Bladee/Gluee/04 - Shadowface.flac"
+Sep 18 13:22 : client: [14] opened from 127.0.0.1:36988
+Sep 18 13:25 : player: played "Bladee/Gluee/01 - Deletee (Intro).flac"
+Sep 18 13:26 : client: [15] opened from 127.0.0.1:39106
+Sep 18 13:26 : client: [15] closed
+Sep 18 13:35 : client: [16] opened from 127.0.0.1:44424
+Sep 18 13:35 : client: [16] closed
+Sep 18 13:38 : player: played "Bladee/Gluee/02 - Safehouse.flac"
+Sep 18 13:41 : player: played "Bladee/Gluee/03 - Ebay.flac"
+Sep 18 13:45 : player: played "Bladee/Gluee/04 - Shadowface.flac"
+Sep 18 13:48 : player: played "Bladee/Gluee/05 - Spellbound.flac"
+Sep 18 13:52 : player: played "Bladee/Gluee/06 - Everlasting Flames.flac"
+Sep 18 13:55 : player: played "Bladee/Gluee/07 - Freeze.flac"
+Sep 18 13:58 : player: played "Bladee/Gluee/08 - Upgrade Enabled.flac"
+Sep 18 14:00 : player: played "Bladee/Gluee/09 - Unreal.flac"
+Sep 18 15:20 : client: [14] closed
+Sep 18 15:20 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 18 15:20 : client: [0] opened from 127.0.0.1:42414
+Sep 18 15:20 : client: [1] opened from 127.0.0.1:42430
+Sep 18 15:20 : client: [2] opened from 127.0.0.1:42432
+Sep 18 15:20 : client: [3] opened from 127.0.0.1:42434
+Sep 18 15:20 : client: [4] opened from 127.0.0.1:42436
+Sep 18 15:20 : client: [5] opened from 127.0.0.1:42438
+Sep 18 15:21 : client: [1] closed
+Sep 18 15:21 : client: [0] closed
+Sep 18 15:21 : client: [6] opened from 127.0.0.1:42440
+Sep 18 15:21 : client: [7] opened from 127.0.0.1:42442
+Sep 18 15:21 : client: [3] closed
+Sep 18 15:21 : client: [2] closed
+Sep 18 15:21 : client: [5] closed
+Sep 18 15:21 : client: [4] closed
+Sep 18 15:22 : client: [7] closed
+Sep 18 15:22 : client: [6] closed
+Sep 19 03:53 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 19 03:53 : client: [0] opened from 127.0.0.1:39288
+Sep 19 03:53 : client: [1] opened from 127.0.0.1:39306
+Sep 19 03:53 : client: [2] opened from 127.0.0.1:39308
+Sep 19 03:53 : client: [3] opened from 127.0.0.1:39310
+Sep 19 03:53 : client: [4] opened from 127.0.0.1:39312
+Sep 19 03:53 : client: [5] opened from 127.0.0.1:39314
+Sep 19 03:54 : client: [1] closed
+Sep 19 03:54 : client: [0] closed
+Sep 19 03:54 : client: [3] closed
+Sep 19 03:54 : client: [2] closed
+Sep 19 03:54 : client: [5] closed
+Sep 19 03:54 : client: [4] closed
+Sep 19 20:27 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 19 20:29 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 19 20:29 : client: [0] opened from 127.0.0.1:37444
+Sep 19 20:29 : client: [1] opened from 127.0.0.1:37462
+Sep 19 20:29 : client: [2] opened from 127.0.0.1:37464
+Sep 19 20:29 : client: [3] opened from 127.0.0.1:37466
+Sep 19 20:29 : client: [4] opened from 127.0.0.1:37468
+Sep 19 20:29 : client: [5] opened from 127.0.0.1:37470
+Sep 19 20:29 : client: [1] closed
+Sep 19 20:29 : client: [0] closed
+Sep 19 20:29 : client: [6] opened from 127.0.0.1:37476
+Sep 19 20:29 : client: [7] opened from 127.0.0.1:37478
+Sep 19 20:30 : client: [3] closed
+Sep 19 20:30 : client: [2] closed
+Sep 19 20:30 : client: [5] closed
+Sep 19 20:30 : client: [4] closed
+Sep 19 20:30 : client: [7] closed
+Sep 19 20:30 : client: [6] closed
+Sep 20 05:58 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 20 05:58 : client: [0] opened from 127.0.0.1:46366
+Sep 20 05:58 : client: [1] opened from 127.0.0.1:46370
+Sep 20 05:58 : client: [2] opened from 127.0.0.1:46372
+Sep 20 05:58 : client: [3] opened from 127.0.0.1:46374
+Sep 20 05:58 : client: [4] opened from 127.0.0.1:46376
+Sep 20 05:58 : client: [5] opened from 127.0.0.1:46378
+Sep 20 05:59 : client: [5] closed
+Sep 20 05:59 : client: [4] closed
+Sep 20 05:59 : client: [6] opened from 127.0.0.1:46392
+Sep 20 05:59 : client: [7] opened from 127.0.0.1:46394
+Sep 20 05:59 : client: [1] closed
+Sep 20 05:59 : client: [0] closed
+Sep 20 05:59 : client: [3] closed
+Sep 20 05:59 : client: [2] closed
+Sep 20 06:00 : client: [7] closed
+Sep 20 06:00 : client: [6] closed
+Sep 20 06:42 : client: [8] opened from 127.0.0.1:47498
+Sep 20 06:42 : client: [8] closed
+Sep 20 06:42 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 20 06:46 : player: played "Bladee/Gluee/01 - Deletee (Intro).flac"
+Sep 20 06:49 : player: played "Bladee/Gluee/02 - Safehouse.flac"
+Sep 20 06:50 : client: [9] opened from 127.0.0.1:47530
+Sep 20 06:52 : player: played "Bladee/Gluee/03 - Ebay.flac"
+Sep 20 06:56 : player: played "Bladee/Gluee/04 - Shadowface.flac"
+Sep 20 06:56 : client: [10] opened from 127.0.0.1:47572
+Sep 20 06:56 : client: [10] closed
+Sep 20 07:10 : client: [11] opened from 127.0.0.1:48036
+Sep 20 07:10 : client: [11] closed
+Sep 20 07:13 : player: played "Bladee/Gluee/05 - Spellbound.flac"
+Sep 20 07:17 : player: played "Bladee/Gluee/06 - Everlasting Flames.flac"
+Sep 20 07:19 : player: played "Bladee/Gluee/07 - Freeze.flac"
+Sep 20 07:22 : player: played "Bladee/Gluee/08 - Upgrade Enabled.flac"
+Sep 20 07:25 : player: played "Bladee/Gluee/09 - Unreal.flac"
+Sep 20 09:31 : client: [12] opened from 127.0.0.1:48416
+Sep 20 09:31 : client: [12] closed
+Sep 20 09:34 : player: played "Bladee/Gluee/01 - Deletee (Intro).flac"
+Sep 20 09:34 : client: [13] opened from 127.0.0.1:48426
+Sep 20 09:34 : client: [13] closed
+Sep 20 09:37 : player: played "Bladee/Gluee/02 - Safehouse.flac"
+Sep 20 09:41 : player: played "Bladee/Gluee/03 - Ebay.flac"
+Sep 20 09:44 : player: played "Bladee/Gluee/04 - Shadowface.flac"
+Sep 20 09:48 : player: played "Bladee/Gluee/05 - Spellbound.flac"
+Sep 20 09:51 : player: played "Bladee/Gluee/06 - Everlasting Flames.flac"
+Sep 20 09:54 : client: [14] opened from 127.0.0.1:48510
+Sep 20 09:54 : client: [14] closed
+Sep 20 09:54 : client: [15] opened from 127.0.0.1:48512
+Sep 20 09:54 : client: [15] closed
+Sep 20 09:54 : player: played "Bladee/Gluee/07 - Freeze.flac"
+Sep 20 09:57 : player: played "Bladee/Gluee/08 - Upgrade Enabled.flac"
+Sep 20 09:59 : client: [16] opened from 127.0.0.1:48610
+Sep 20 09:59 : client: [16] closed
+Sep 20 14:58 : client: [17] opened from 127.0.0.1:34368
+Sep 20 14:58 : client: [17] closed
+Sep 20 14:59 : client: [18] opened from 127.0.0.1:34372
+Sep 20 14:59 : player: played "Bladee/Gluee/09 - Unreal.flac"
+Sep 20 14:59 : client: [18] closed
+Sep 20 14:59 : client: [19] opened from 127.0.0.1:34376
+Sep 20 14:59 : client: [19] closed
+Sep 20 15:02 : player: played "Bladee/Gluee/01 - Deletee (Intro).flac"
+Sep 20 15:05 : player: played "Bladee/Gluee/02 - Safehouse.flac"
+Sep 20 15:08 : player: played "Bladee/Gluee/03 - Ebay.flac"
+Sep 20 15:12 : player: played "Bladee/Gluee/04 - Shadowface.flac"
+Sep 20 15:15 : player: played "Bladee/Gluee/05 - Spellbound.flac"
+Sep 20 15:19 : player: played "Bladee/Gluee/06 - Everlasting Flames.flac"
+Sep 20 15:22 : player: played "Bladee/Gluee/07 - Freeze.flac"
+Sep 20 15:25 : player: played "Bladee/Gluee/08 - Upgrade Enabled.flac"
+Sep 20 15:27 : player: played "Bladee/Gluee/09 - Unreal.flac"
+Sep 20 18:18 : client: [9] closed
+Sep 21 10:39 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 21 10:39 : client: [0] opened from 127.0.0.1:55416
+Sep 21 10:39 : client: [1] opened from 127.0.0.1:55420
+Sep 21 10:39 : client: [2] opened from 127.0.0.1:55422
+Sep 21 10:39 : client: [3] opened from 127.0.0.1:55424
+Sep 21 10:39 : client: [4] opened from 127.0.0.1:55426
+Sep 21 10:39 : client: [5] opened from 127.0.0.1:55428
+Sep 21 10:40 : client: [1] closed
+Sep 21 10:40 : client: [0] closed
+Sep 21 10:40 : client: [3] closed
+Sep 21 10:40 : client: [2] closed
+Sep 21 10:40 : client: [5] closed
+Sep 21 10:40 : client: [4] closed
+Sep 21 13:04 : client: [6] opened from 127.0.0.1:59510
+Sep 21 13:04 : client: [6] closed
+Sep 21 13:04 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 21 13:04 : client: [7] opened from 127.0.0.1:59514
+Sep 21 13:04 : client: [7] closed
+Sep 21 13:04 : client: [8] opened from 127.0.0.1:59516
+Sep 21 13:04 : client: [8] closed
+Sep 21 13:08 : player: played "Bladee/Gluee/01 - Deletee (Intro).flac"
+Sep 21 13:10 : player: played "Bladee/Gluee/02 - Safehouse.flac"
+Sep 21 13:11 : client: [9] opened from 127.0.0.1:59988
+Sep 21 13:11 : client: [9] closed
+Sep 21 16:45 : client: [10] opened from 127.0.0.1:40240
+Sep 21 16:45 : client: [11] opened from 127.0.0.1:40242
+Sep 21 16:45 : client: [12] opened from 127.0.0.1:40244
+Sep 21 16:45 : client: [13] opened from 127.0.0.1:40246
+Sep 21 16:45 : client: [14] opened from 127.0.0.1:40248
+Sep 21 16:45 : client: [15] opened from 127.0.0.1:40250
+Sep 21 16:46 : client: [11] closed
+Sep 21 16:46 : client: [10] closed
+Sep 21 16:46 : client: [13] closed
+Sep 21 16:46 : client: [12] closed
+Sep 21 16:46 : client: [15] closed
+Sep 21 16:46 : client: [14] closed
+Sep 21 16:56 : client: [16] opened from 127.0.0.1:40410
+Sep 21 16:56 : client: [17] opened from 127.0.0.1:40412
+Sep 21 16:56 : client: [18] opened from 127.0.0.1:40414
+Sep 21 16:56 : client: [19] opened from 127.0.0.1:40416
+Sep 21 16:56 : client: [20] opened from 127.0.0.1:40418
+Sep 21 16:56 : client: [21] opened from 127.0.0.1:40420
+Sep 21 16:57 : client: [17] closed
+Sep 21 16:57 : client: [16] closed
+Sep 21 16:57 : client: [19] closed
+Sep 21 16:57 : client: [18] closed
+Sep 21 16:57 : client: [21] closed
+Sep 21 16:57 : client: [20] closed
+Sep 21 17:02 : client: [22] opened from 127.0.0.1:40476
+Sep 21 17:02 : client: [22] closed
+Sep 21 17:03 : client: [23] opened from 127.0.0.1:40492
+Sep 21 17:03 : client: [23] closed
+Sep 21 17:05 : client: [24] opened from 127.0.0.1:40552
+Sep 21 17:05 : client: [24] closed
+Sep 21 17:05 : client: [25] opened from 127.0.0.1:40554
+Sep 21 17:05 : client: [25] closed
+Sep 21 17:05 : client: [26] opened from 127.0.0.1:40556
+Sep 21 17:05 : client: [26] closed
+Sep 21 17:05 : client: [27] opened from 127.0.0.1:40560
+Sep 21 17:05 : client: [27] closed
+Sep 21 17:05 : client: [28] opened from 127.0.0.1:40562
+Sep 21 17:05 : client: [28] closed
+Sep 21 17:05 : client: [29] opened from 127.0.0.1:40564
+Sep 21 17:05 : client: [29] closed
+Sep 21 17:06 : client: [30] opened from 127.0.0.1:40568
+Sep 21 17:06 : client: [30] closed
+Sep 21 17:07 : client: [31] opened from 127.0.0.1:40580
+Sep 21 17:07 : client: [31] closed
+Sep 21 17:07 : client: [32] opened from 127.0.0.1:40582
+Sep 21 17:07 : client: [32] closed
+Sep 21 17:07 : client: [33] opened from 127.0.0.1:40584
+Sep 21 17:07 : client: [33] closed
+Sep 21 17:07 : client: [34] opened from 127.0.0.1:40586
+Sep 21 17:07 : client: [34] closed
+Sep 21 17:07 : client: [35] opened from 127.0.0.1:40590
+Sep 21 17:07 : client: [35] closed
+Sep 21 17:07 : client: [36] opened from 127.0.0.1:40592
+Sep 21 17:07 : client: [36] closed
+Sep 21 17:07 : client: [37] opened from 127.0.0.1:40594
+Sep 21 17:07 : client: [37] closed
+Sep 21 17:07 : client: [38] opened from 127.0.0.1:40596
+Sep 21 17:07 : client: [38] closed
+Sep 21 17:07 : client: [39] opened from 127.0.0.1:40598
+Sep 21 17:07 : client: [39] closed
+Sep 21 17:07 : client: [40] opened from 127.0.0.1:40600
+Sep 21 17:07 : client: [40] closed
+Sep 21 17:07 : client: [41] opened from 127.0.0.1:40602
+Sep 21 17:07 : client: [41] closed
+Sep 21 17:07 : client: [42] opened from 127.0.0.1:40604
+Sep 21 17:07 : client: [42] closed
+Sep 21 17:07 : client: [43] opened from 127.0.0.1:40606
+Sep 21 17:07 : client: [43] closed
+Sep 21 17:07 : client: [44] opened from 127.0.0.1:40608
+Sep 21 17:07 : client: [44] closed
+Sep 21 17:07 : client: [45] opened from 127.0.0.1:40610
+Sep 21 17:07 : client: [45] closed
+Sep 21 17:07 : client: [46] opened from 127.0.0.1:40612
+Sep 21 17:07 : client: [46] closed
+Sep 21 17:07 : client: [47] opened from 127.0.0.1:40614
+Sep 21 17:07 : client: [47] closed
+Sep 21 17:07 : client: [48] opened from 127.0.0.1:40616
+Sep 21 17:07 : client: [48] closed
+Sep 21 21:51 : player: played "Bladee/Gluee/03 - Ebay.flac"
+Sep 22 09:06 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 22 09:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 22 15:02 : player: played "Bladee/Gluee/03 - Ebay.flac"
+Sep 22 15:02 : update: added Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3
+Sep 22 15:02 : update: added Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3
+Sep 22 15:02 : update: added Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3
+Sep 22 15:02 : update: added Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3
+Sep 22 15:02 : update: added Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3
+Sep 22 15:02 : update: added Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3
+Sep 22 15:02 : update: added Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3
+Sep 22 15:02 : update: added Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3
+Sep 22 15:02 : update: added Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3
+Sep 22 15:03 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 22 15:07 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 22 15:10 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 22 15:10 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 22 15:13 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 22 15:15 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3"
+Sep 22 15:17 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3"
+Sep 22 15:21 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3"
+Sep 22 15:26 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 23 12:28 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 23 12:35 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 23 12:35 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 23 12:39 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 23 12:43 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 23 12:43 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 23 12:46 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 23 12:47 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3"
+Sep 23 12:49 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3"
+Sep 23 12:53 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3"
+Sep 23 12:59 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 23 13:05 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 23 13:09 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 23 13:12 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 23 13:12 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 23 13:15 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 23 13:17 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3"
+Sep 23 13:18 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3"
+Sep 23 13:22 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3"
+Sep 23 13:28 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 23 17:27 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 23 17:27 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 23 17:28 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 23 17:40 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 23 18:03 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 23 18:06 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 23 18:07 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3"
+Sep 23 18:09 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3"
+Sep 23 18:52 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3"
+Sep 23 20:11 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 23 23:07 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 23 23:11 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 24 03:12 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 24 12:34 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 24 12:35 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 24 14:31 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 24 14:31 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 24 14:34 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 24 14:35 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3"
+Sep 24 14:37 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3"
+Sep 24 14:41 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3"
+Sep 24 14:47 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 24 18:19 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 24 23:06 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 24 23:07 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 24 23:11 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 24 23:14 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 24 23:15 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 24 23:18 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 24 23:19 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3"
+Sep 24 23:21 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3"
+Sep 24 23:27 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3"
+Sep 24 23:33 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 25 00:54 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 25 14:02 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 25 14:02 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 25 17:17 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 25 17:21 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 25 17:25 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 25 17:25 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 25 17:28 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 25 17:29 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3"
+Sep 25 17:31 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3"
+Sep 25 17:35 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3"
+Sep 26 03:38 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 26 14:35 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 26 14:35 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 26 19:37 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 26 19:44 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 26 19:48 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 26 19:51 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 26 19:51 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 26 19:54 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 26 19:56 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3"
+Sep 26 19:57 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3"
+Sep 26 20:02 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3"
+Sep 26 20:07 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 26 20:29 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 26 20:33 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 26 20:36 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 26 20:36 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 26 20:39 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 26 20:40 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3"
+Sep 26 20:42 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3"
+Sep 26 20:46 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3"
+Sep 26 20:52 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 26 21:01 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 26 21:05 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 26 21:08 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 26 21:08 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 26 21:11 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 26 21:13 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/06 - I'm tired (see page 28 and 200).mp3"
+Sep 26 21:15 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/07 - THE MASSAGE 4_ Museum (see page 140, 32, 73, and 8).mp3"
+Sep 26 21:19 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/08 - THE MESSAGE 3_ Blood (see page 39, 179, and Bye).mp3"
+Sep 26 21:24 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/09 - The Wake Pt. 3 & 2 (see page 87, 58, and 48).mp3"
+Sep 26 23:19 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/01 - Simile #7 (see page 127 and Ttrabul 2).mp3"
+Sep 26 23:23 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/02 - Smile #6 (see page 198 and 158).mp3"
+Sep 26 23:26 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/03 - Smile #5 (see page 103 and 107).mp3"
+Sep 26 23:26 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/04 - 360 Degree Pole Shift Hypothesis (see page 13).mp3"
+Sep 27 01:24 : player: played "Slauson Malone/slauson malone - Vergangenheitsbewältigung (Crater Speak)/05 - My feet's tired (see page 108).mp3"
+Sep 27 01:29 : player: played "BadBadNotGood/IV/01 - And That, Too.mp3"
+Sep 27 01:30 : player: played "BadBadNotGood/IV/02 - Speaking Gently.mp3"
+Sep 27 01:32 : player: played "Boards of Canada/Music Has The Right To Children/06_Boards of Canada - Wildlife Analysis.mp3"
+Sep 27 01:38 : player: played "Boards of Canada/Music Has The Right To Children/08_Boards of Canada - An Eagle in Your Mind.mp3"
+Sep 27 01:40 : player: played "Boards of Canada/Music Has The Right To Children/18_Boards of Canada - The Color of the Fire.mp3"
+Sep 27 05:19 : player: played "Boards of Canada/Music Has The Right To Children/23_Boards of Canada - Telephasic Workshop.mp3"
+Sep 27 17:24 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 27 17:25 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 27 17:58 : player: played "Boards of Canada/Music Has The Right To Children/23_Boards of Canada - Telephasic Workshop.mp3"
+Sep 27 23:33 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 27 23:33 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 02:25 : player: played "Boards of Canada/Music Has The Right To Children/23_Boards of Canada - Telephasic Workshop.mp3"
+Sep 28 02:27 : player: played "Boards of Canada/Music Has The Right To Children/27_Boards of Canada - Triangles & Rhombuses.mp3"
+Sep 28 02:32 : player: played "Boards of Canada/Music Has The Right To Children/34_Boards of Canada - Sixtyten.mp3"
+Sep 28 02:38 : player: played "Boards of Canada/Music Has The Right To Children/37_Boards of Canada - Turquoise Hexagon Sun.mp3"
+Sep 28 02:38 : player: played "Boards of Canada/Music Has The Right To Children/38_Boards of Canada - Kaini Industries.mp3"
+Sep 28 02:40 : player: played "Boards of Canada/Music Has The Right To Children/41_Boards of Canada - Bocuma.mp3"
+Sep 28 02:43 : player: played "Boards of Canada/Music Has The Right To Children/44_Boards of Canada - Roygbiv.mp3"
+Sep 28 06:18 : player: played "Boards of Canada/Music Has The Right To Children/46_Boards of Canada - Rue the Whirl.mp3"
+Sep 28 06:18 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 06:18 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 06:19 : player: played "Boards of Canada/Music Has The Right To Children/46_Boards of Canada - Rue the Whirl.mp3"
+Sep 28 06:19 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 06:19 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 06:22 : player: played "Boards of Canada/Music Has The Right To Children/46_Boards of Canada - Rue the Whirl.mp3"
+Sep 28 06:22 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 06:22 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 07:02 : player: played "Boards of Canada/Music Has The Right To Children/46_Boards of Canada - Rue the Whirl.mp3"
+Sep 28 16:47 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 16:47 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 28 18:09 : player: played "Boards of Canada/Music Has The Right To Children/46_Boards of Canada - Rue the Whirl.mp3"
+Sep 29 08:52 : player: played "Boards of Canada/Music Has The Right To Children/49_Boards of Canada - Olson.mp3"
+Sep 29 18:50 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 29 18:50 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 29 20:54 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 29 20:55 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 30 08:33 : player: played "Boards of Canada/Music Has The Right To Children/49_Boards of Canada - Olson.mp3"
+Sep 30 08:33 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 30 08:33 : ffmpeg/aac: Could not update timestamps for skipped samples.
+Sep 30 08:36 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 30 08:36 : ffmpeg/aac: Could not update timestamps for skipped samples.
+Sep 30 08:37 : player: played "Kanye/808s & Heartbreak/08 Street Lights.m4a"
+Sep 30 10:05 : player: played "Kanye/808s & Heartbreak/09 Bad News.m4a"
+Sep 30 19:54 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Sep 30 19:54 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Sep 30 19:54 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 04:31 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 01 04:31 : ffmpeg/aac: Could not update timestamps for skipped samples.
+Oct 01 04:36 : player: played "Kanye/808s & Heartbreak/10 See You In My Nightmares (ft. Lil Wayne).m4a"
+Oct 01 04:36 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 04:36 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 01 04:36 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 04:41 : player: played "Kanye/808s & Heartbreak/10 See You In My Nightmares (ft. Lil Wayne).m4a"
+Oct 01 04:41 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 04:41 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 01 04:41 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 04:47 : player: played "Kanye/808s & Heartbreak/10 See You In My Nightmares (ft. Lil Wayne).m4a"
+Oct 01 04:48 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 04:48 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 01 04:48 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 06:35 : player: played "Kanye/808s & Heartbreak/10 See You In My Nightmares (ft. Lil Wayne).m4a"
+Oct 01 06:56 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 06:56 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 01 06:56 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 10:54 : player: played "Kanye/808s & Heartbreak/10 See You In My Nightmares (ft. Lil Wayne).m4a"
+Oct 01 19:11 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 19:11 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Oct 01 19:11 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Oct 01 22:27 : player: played "Kanye/808s & Heartbreak/10 See You In My Nightmares (ft. Lil Wayne).m4a"
+Nov 12 06:11 : exception: RTIOThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 12 06:11 : ffmpeg/mov,mp4,m4a,3gp,3g2,mj2: stream 0, timescale not set
+Nov 12 06:11 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted

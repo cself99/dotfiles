@@ -12,9 +12,10 @@ reboot_to_windows ()
     sudo grub-reboot "$windows_title" && sudo reboot
 }
 
+alias wow='cd /home/c/HDD/Games/WoW/drive_c/Program\ Files\ \(x86\)/World\ of\ Warcraft/_retail_ && ./CurseBreaker'
 alias windows='reboot_to_windows'
 alias ls='lsd -hA --group-dirs first'
-alias mon='bash ~/Scripts/mon_wayland.sh'
+alias mon='bash ~/Scripts/mon.sh'
 alias bios='systemctl reboot --firmware-setup'
 alias cleanup='sudo pacman -Rsn $(pacman -Qdtq); yay -Scc'
 alias sw='python ~/Scripts/swallow'
